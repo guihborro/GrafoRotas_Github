@@ -177,7 +177,10 @@ def main():
         for idc, c in enumerate(cidades):
             w.writerow([idc, c["nome"], c["codigo_ibge"], c["lat"], c["lon"]])
 
+    # tipo do grafo: 2 = nao orientado com peso na aresta
+    TIPO_GRAFO = 2
     with open("grafo.txt", "w", encoding="utf-8") as f:
+        f.write(f"{TIPO_GRAFO}\n")
         f.write(f"{len(cidades)}\n")
         for idc, c in enumerate(cidades):
             f.write(f"{idc};{c['nome']}\n")

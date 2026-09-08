@@ -14,9 +14,25 @@ class Grafo:
         insercao e remocao de arestas em tempo medio O(1).
     """
 
-    def __init__(self):
+    # Tipo do grafo (primeiro elemento do arquivo grafo.txt).
+    # A classificacao segue a categoria adotada no projeto:
+    #   2 = nao orientado com peso na aresta (categoria deste projeto)
+    #   6 = orientado com peso na aresta
+    TIPOS = {
+        1: "nao orientado sem peso",
+        2: "nao orientado com peso na aresta",
+        5: "orientado sem peso",
+        6: "orientado com peso na aresta",
+    }
+
+    def __init__(self, tipo=2):
+        self.tipo = tipo        # tipo/categoria do grafo (ver TIPOS)
         self.rotulos = {}       # id_vertice -> nome da cidade
         self.adjacencia = {}    # id_vertice -> {id_vizinho: peso}
+
+    def descricao_tipo(self):
+        """Descricao textual do tipo do grafo."""
+        return self.TIPOS.get(self.tipo, "desconhecido")
 
     # ------------------------------------------------------------------ #
     # Manipulacao de vertices
@@ -80,12 +96,18 @@ class Grafo:
     # Persistencia: leitura e gravacao do arquivo grafo.txt
     # ------------------------------------------------------------------ #
     def ler_arquivo(self, caminho="grafo.txt"):
-        """Le o grafo a partir do arquivo texto (formato descrito no relatorio)."""
+        """Le o grafo a partir do arquivo texto (formato descrito no relatorio).
+
+        Formato: a primeira linha e o tipo do grafo; a segunda, o numero de
+        vertices; seguem N linhas 'id;nome'; depois o numero de arestas; e, por
+        fim, M linhas 'id_u;id_v;peso'.
+        """
         self.rotulos.clear()
         self.adjacencia.clear()
         with open(caminho, "r", encoding="utf-8") as f:
             linhas = [ln.strip() for ln in f if ln.strip()]
         idx = 0
+        self.tipo = int(linhas[idx]); idx += 1
         n = int(linhas[idx]); idx += 1
         for _ in range(n):
             partes = linhas[idx].split(";"); idx += 1
@@ -101,6 +123,7 @@ class Grafo:
     def gravar_arquivo(self, caminho="grafo.txt"):
         """Grava o estado atual do grafo no arquivo texto."""
         with open(caminho, "w", encoding="utf-8") as f:
+            f.write(f"{self.tipo}\n")
             f.write(f"{self.numero_vertices()}\n")
             for id_v in sorted(self.adjacencia):
                 f.write(f"{id_v};{self.rotulos.get(id_v, '')}\n")

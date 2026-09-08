@@ -37,20 +37,22 @@ feita pelo script `coletar_dados.py` e é totalmente reproduzível.
 |---|---|
 | `coletar_dados.py` | **Coleta os dados reais** (IBGE + OpenStreetMap) e gera `grafo.txt` e `cidades.csv` |
 | `grafo.py` | Classe `Grafo` (infraestrutura: lista de adjacência, I/O, conexidade, grafo reduzido) |
-| `main.py` | Roteiro de testes de todas as funcionalidades da etapa |
+| `main.py` | Menu interativo com todas as operações da infraestrutura do grafo |
 | `gerar_imagens.py` | Geração das figuras (esboço e malha completa) |
 | `google_maps_api.py` | Integração opcional com o Google Maps (alternativa ao OSM) |
 | `grafo.txt` | Arquivo de dados do grafo, gerado pela coleta (vértices + arestas ponderadas) |
 | `cidades.csv` | id, nome, código IBGE, latitude e longitude de cada município (gerado pela coleta) |
 | `imagens/esboco_grafo.png` | Figura conceitual da modelagem (cidades como vértices e distâncias como arestas) |
 | `imagens/rede_completa.png` | Figura da malha completa modelada (todos os municípios e ligações reais) |
-| `Relatorio_GrafoRotas_Parte2.docx` / `.pdf` | Relatório escrito da Parte 2 |
+| `Relatorio_GrafoRotas_Parte2_PRONTA.docx` | Relatório escrito da Parte 2 |
+| `Rubrica_GrafoRotas_Parte2_PRONTA.docx` | Rubrica de avaliação preenchida |
 | `requirements.txt` | Dependências Python (`requests`, `matplotlib`) |
 | `.gitignore` | Arquivos não versionados (`grafo_salvo.txt`, `__pycache__/`, `.env`) |
 
 ## Formato do `grafo.txt`
 
 ```
+T                     # tipo do grafo (2 = nao orientado com peso na aresta)
 N                     # numero de vertices
 id;nome_da_cidade     # N linhas
 ...
@@ -63,7 +65,7 @@ id_u;id_v;peso_km     # M linhas (peso = distancia rodoviaria real, km)
 ```bash
 pip install -r requirements.txt
 python3 coletar_dados.py    # coleta IBGE + OpenStreetMap -> grafo.txt e cidades.csv
-python3 main.py             # roda todos os testes da infraestrutura
+python3 main.py             # menu interativo com as operacoes da infraestrutura
 python3 gerar_imagens.py    # gera esboco_grafo.png e rede_completa.png (versionadas em imagens/)
 ```
 
