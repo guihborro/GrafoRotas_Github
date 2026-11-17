@@ -1,53 +1,96 @@
 # GrafoRotas
 
-Modelagem e análise de rotas rodoviárias entre municípios do estado de São Paulo
-usando **Teoria dos Grafos**, dados oficiais do **IBGE** e do **OpenStreetMap**.
+**Rotas de menor distância entre municípios paulistas** com **Teoria dos Grafos**,
+dados oficiais do **IBGE** e do **OpenStreetMap**.
 
-Projeto da disciplina de Teoria dos Grafos — Bacharelado em Ciência da Computação.
+Projeto da disciplina de Teoria dos Grafos (6º semestre), Bacharelado em Ciência da
+Computação, Universidade Presbiteriana Mackenzie. Professor: Prof. Dr. Ivan Carlos
+Alcântara de Oliveira.
 
 ## Integrantes
 
-- Guilherme Haddad Borro — RA 10427699
-- Rafael Lima — RA 10425819
-- Pedro Augusto Yoshikuni — RA 10410287
-- Tiago Silveira Lopes — RA 10417600
+- Guilherme Haddad Borro (RA 10427699)
+- Rafael Lima (RA 10425819)
+- Pedro Augusto Yoshikuni (RA 10410287)
+- Tiago Silveira Lopes (RA 10417600)
 
 ## Descrição
 
-Cada **vértice** é um município e cada **aresta** é a ligação entre duas cidades,
-ponderada pela **distância rodoviária real** entre elas. O grafo é **não orientado
-com peso na aresta** (categoria 2). O **problema central** é o caminho de menor
-distância entre cidades (algoritmo de **Dijkstra**); a árvore geradora mínima é
-análise complementar.
+Cada **vértice** é um município e cada **aresta** é a ligação entre duas cidades vizinhas,
+ponderada pela **distância rodoviária** entre elas (OSRM/OpenStreetMap). O grafo é **não
+orientado com peso na aresta** (categoria 2), com **215 vértices e 643 arestas**: os municípios
+das Regiões Geográficas Intermediárias de São Paulo, Sorocaba e Campinas (IBGE, 2017).
 
-**Recorte adotado:** os municípios das **Regiões Geográficas Intermediárias de São
-Paulo, Sorocaba e Campinas** (regionalização oficial do IBGE, 2017) — unidades
-oficiais, contíguas e centradas na maior metrópole do país. A combinação das três
-regiões resulta em **215 municípios (vértices) e 643 ligações (arestas)**,
-ultrapassando o mínimo de 80 vértices exigido pelo trabalho. Para ajustar o recorte,
-edite a lista `INTERMEDIARIAS_ALVO` no topo de `coletar_dados.py`.
+- **Problema central:** caminho de menor distância entre duas cidades, resolvido com o
+  **algoritmo de Dijkstra** e conferido por Floyd-Warshall para todos os pares.
+- **Análise complementar:** árvore geradora mínima (**Prim**), conferida por Kruskal.
+- **Características do grafo:** graus, coloração (Welsh-Powell + clique máxima), euleriano,
+  hamiltoniano, pontos de articulação e pontes, planaridade e excentricidade/centro.
 
-**Fontes de dados:** IBGE (lista oficial de municípios) e OpenStreetMap
-(coordenadas via Nominatim e distâncias rodoviárias reais via OSRM). A coleta é
-feita pelo script `coletar_dados.py` e é totalmente reproduzível.
+### Principais resultados
+
+| Característica | Resultado |
+|---|---|
+| Conexidade | conexo, biconexo (0 articulações, 0 pontes) |
+| Graus | mínimo 5, máximo 9, média 5,98 |
+| Número cromático | exatamente 6 (Welsh-Powell = 6 e clique K6) |
+| Euleriano | não (124 vértices de grau ímpar) |
+| Hamiltoniano | sim: ciclo encontrado e verificado (6.912,7 km) |
+| Planar | não (643 > 3n − 6 = 639 e contém K5) |
+| Raio / diâmetro | 328,5 km (centro: Iperó) / 653,4 km (Barra do Turvo ↔ Mococa) |
+| Árvore geradora mínima | 214 arestas, 3.944,0 km |
+| São Paulo → Campinas (Dijkstra) | 135,2 km, 8 trechos |
 
 ## Estrutura dos arquivos
 
 | Arquivo | Descrição |
 |---|---|
-| `coletar_dados.py` | **Coleta os dados reais** (IBGE + OpenStreetMap) e gera `grafo.txt` e `cidades.csv` |
-| `grafo.py` | Classe `Grafo` (infraestrutura: lista de adjacência, I/O, conexidade, grafo reduzido) |
-| `main.py` | Menu interativo com todas as operações da infraestrutura do grafo |
-| `gerar_imagens.py` | Geração das figuras (esboço e malha completa) |
+| `main.py` | Menu da aplicação (título + 21 opções) |
+| `grafo.py` | Classe `Grafo`: lista de adjacência, leitura/gravação do `grafo.txt`, busca por nome, conexidade, grafo reduzido |
+| `algoritmos.py` | Parte 3: Dijkstra, Prim, graus, coloração, euleriano, hamiltoniano, Tarjan, planaridade, excentricidade |
+| `testes.py` | 48 testes automatizados (no mínimo 2 por opção do menu); gera `resultados_testes.txt` |
+| `coletar_dados.py` | Coleta IBGE + OpenStreetMap; gera `grafo.txt`, `cidades.csv` e `coleta_metadados.json` |
+| `gerar_imagens.py` | Figuras do relatório (pasta `imagens/`) |
 | `google_maps_api.py` | Integração opcional com o Google Maps (alternativa ao OSM) |
-| `grafo.txt` | Arquivo de dados do grafo, gerado pela coleta (vértices + arestas ponderadas) |
-| `cidades.csv` | id, nome, código IBGE, latitude e longitude de cada município (gerado pela coleta) |
-| `imagens/esboco_grafo.png` | Figura conceitual da modelagem (cidades como vértices e distâncias como arestas) |
-| `imagens/rede_completa.png` | Figura da malha completa modelada (todos os municípios e ligações reais) |
-| `Relatorio_GrafoRotas_Parte2_PRONTA.docx` | Relatório escrito da Parte 2 |
-| `Rubrica_GrafoRotas_Parte2_PRONTA.docx` | Rubrica de avaliação preenchida |
-| `requirements.txt` | Dependências Python (`requests`, `matplotlib`) |
-| `.gitignore` | Arquivos não versionados (`grafo_salvo.txt`, `__pycache__/`, `.env`) |
+| `grafo.txt` | Grafo modelado (vértices + arestas ponderadas) |
+| `cidades.csv` | id, nome, código IBGE, latitude e longitude de cada município |
+| `coleta_metadados.json` | Parâmetros, data e verificação da coleta (reprodutibilidade) |
+| `resultados_testes.txt` | Entrada, saída e veredito de cada teste |
+| `Relatorio_GrafoRotas_Parte3.docx` | Relatório final (Parte 3) |
+| `Rubrica_GrafoRotas_Parte3.docx` | Rubrica preenchida (Parte 3) |
+| `Relatorio_GrafoRotas_Parte2_Pronta.docx`, `Rubrica_GrafoRotas_Parte2_Pronta.docx` | Entregas da Parte 2 |
+
+## Menu da aplicação
+
+```
+======================================================================
+   GrafoRotas - Rotas de Menor Distancia entre Municipios Paulistas
+Tipo 2 (nao orientado com peso na aresta) | 215 vertices | 643 arestas
+======================================================================
+ Infraestrutura do grafo
+  1. Exibir grafo (lista de adjacencia)
+  2. Mostrar conteudo do arquivo (grafo.txt)
+  3. Inserir vertice              4. Remover vertice
+  5. Inserir aresta               6. Remover aresta
+  7. Consultar grau de um vertice
+  8. Determinar conexidade        9. Construir grafo reduzido
+ 10. Gravar grafo em arquivo     11. Recarregar grafo de arquivo
+ Solucao do problema: rotas de menor distancia
+ 12. Caminho minimo entre duas cidades (Dijkstra)
+ 13. Distancias minimas a partir de uma cidade (Dijkstra)
+ 14. Arvore geradora minima da malha (Prim)
+ Caracteristicas do grafo
+ 15. Grau dos vertices (sequencia e distribuicao)
+ 16. Coloracao de vertices (Welsh-Powell)
+ 17. Grafo euleriano / percurso euleriano
+ 18. Grafo hamiltoniano / ciclo hamiltoniano
+ 19. Pontos de articulacao e pontes (cidades/ligacoes criticas)
+ 20. Planaridade
+ 21. Excentricidade, raio, diametro e centro
+  0. Sair
+```
+
+As cidades podem ser informadas pelo **nome** (sem acento, sem diferenciar maiúsculas) ou pelo id.
 
 ## Formato do `grafo.txt`
 
@@ -57,34 +100,44 @@ N                     # numero de vertices
 id;nome_da_cidade     # N linhas
 ...
 M                     # numero de arestas
-id_u;id_v;peso_km     # M linhas (peso = distancia rodoviaria real, km)
+id_u;id_v;peso_km     # M linhas (peso = distancia rodoviaria, km)
 ```
 
 ## Como executar
 
+Requer Python 3.8+.
+
 ```bash
 pip install -r requirements.txt
-python3 coletar_dados.py    # coleta IBGE + OpenStreetMap -> grafo.txt e cidades.csv
-python3 main.py             # menu interativo com as operacoes da infraestrutura
-python3 gerar_imagens.py    # gera esboco_grafo.png e rede_completa.png (versionadas em imagens/)
+python main.py              # menu da aplicacao
+python testes.py            # 48 testes; grava resultados_testes.txt
+python gerar_imagens.py     # figuras em imagens/
+python coletar_dados.py     # nova coleta (internet; ~15-20 min)
 ```
 
-> A coleta (`coletar_dados.py`) faz muitas consultas a serviços gratuitos, com
-> pausa entre elas, então leva alguns minutos. Rode em um ambiente com internet
-> (ex.: GitHub Codespaces).
+O menu e os testes usam apenas a biblioteca padrão; `requests` (coleta) e `matplotlib`
+(figuras) só são necessários para os scripts correspondentes.
 
-## Funcionalidades implementadas (Parte 2)
+## Coleta e reprodutibilidade
 
-- [x] Coleta de dados reais (IBGE + OpenStreetMap)
-- [x] Leitura e gravação do arquivo `grafo.txt`
-- [x] Inserção e remoção de vértices
-- [x] Inserção e remoção de arestas
-- [x] Exibição do grafo
-- [x] Determinação da conexidade (busca em profundidade)
-- [x] Construção do grafo reduzido
-- [x] Código modular e documentado
+Parâmetros: regiões intermediárias São Paulo, Sorocaba e Campinas; K = 5 vizinhos mais
+próximos (haversine); Nominatim com a consulta `"<município>, Sao Paulo, Brasil"` (limit=10,
+preferindo o resultado de mesmo nome do tipo city/town/village, isto é, a sede urbana); OSRM
+perfil `driving`, com até 3 tentativas por consulta; pausa de 1,1 s entre chamadas. A base atual
+foi coletada em **16/11/2026, das 20:08 às 20:39**. Tudo isso está em `coleta_metadados.json`,
+que o script grava automaticamente a cada coleta.
 
-## Próxima etapa
+Comparada com a base da Parte 2, a nova coleta manteve os 215 municípios e 642 das 643
+ligações, com 575 pesos idênticos e diferença média de 0,8 km nos demais. Uma primeira
+reexecução mostrou que o OpenStreetMap passou a devolver, para 30 municípios, o ponto do limite
+municipal em vez da sede urbana; o script foi corrigido para escolher a sede.
 
-- [ ] **Algoritmo de caminho mínimo (Dijkstra) — problema central**
-- [ ] Árvore geradora mínima (Prim/Kruskal) — análise complementar
+O critério de K vizinhos **não garante** conexidade; por isso `coletar_dados.py` acrescenta,
+se necessário, a ligação mais curta entre componentes desconexas. Na coleta atual nenhuma
+aresta extra foi necessária, e o teste `test_00a` confirma que as 643 arestas são reproduzidas
+exatamente a partir de `cidades.csv`.
+
+## Links
+
+- Repositório: https://github.com/guihborro/GrafoRotas_Github
+- Vídeo (YouTube): _a inserir_

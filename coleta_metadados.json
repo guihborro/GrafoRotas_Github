@@ -1,0 +1,37 @@
+{
+  "data_hora_inicio": "2026-11-16T20:08:47-03:00",
+  "data_hora_fim": "2026-11-16T20:39:41-03:00",
+  "parametros": {
+    "uf": "SP (codigo IBGE 35)",
+    "intermediarias_alvo": [
+      "Sao Paulo",
+      "Sorocaba",
+      "Campinas"
+    ],
+    "imediatas_alvo": [],
+    "k_vizinhos": 5,
+    "criterio_aresta": "u-v se v esta entre os K mais proximos de u (haversine) ou vice-versa",
+    "consulta_nominatim": "'<municipio>, Sao Paulo, Brasil' (format=json, limit=10); prefere o resultado de mesmo nome com addresstype city/town/village (sede)",
+    "tentativas_osrm": 3,
+    "perfil_osrm": "driving, overview=false (distancia da rota mais rapida)",
+    "pausa_entre_chamadas_s": 1.1,
+    "user_agent": "GrafoRotas-TeoriaDosGrafos/1.0 (projeto academico)"
+  },
+  "servicos": {
+    "ibge": "https://servicodados.ibge.gov.br/api/v1/localidades/estados/35/municipios",
+    "nominatim": "https://nominatim.openstreetmap.org/search",
+    "osrm": "https://router.project-osrm.org/route/v1/driving/"
+  },
+  "ambiente": {
+    "python": "3.12.7",
+    "requests": "2.34.2"
+  },
+  "resultado": {
+    "municipios_ibge": 215,
+    "municipios_sem_coordenada": [],
+    "vertices": 215,
+    "arestas": 643,
+    "arestas_extras_conexidade": [],
+    "arestas_com_fallback_haversine": []
+  }
+}

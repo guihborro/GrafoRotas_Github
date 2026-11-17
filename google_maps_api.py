@@ -1,7 +1,21 @@
-# GrafoRotas - Integracao opcional com a API do Google Maps (alternativa ao OpenStreetMap).
-# Teoria dos Grafos | Bacharelado em Ciencia da Computacao
-# Integrantes: Guilherme Haddad Borro - RA 10427699 | Rafael Lima - RA 10425819 | Pedro Augusto Yoshikuni - RA 10410287 | Tiago Silveira Lopes - RA 10417600
-# Historico: 2026-09-02
+# =============================================================================
+# GrafoRotas - Integracao opcional com a API do Google Maps (alternativa ao
+# OpenStreetMap) para obter a distancia rodoviaria entre dois pontos.
+#
+# Teoria dos Grafos - 6o semestre | Bacharelado em Ciencia da Computacao
+# Universidade Presbiteriana Mackenzie - Prof. Dr. Ivan Carlos Alcantara de Oliveira
+#
+# Integrantes:
+#   Guilherme Haddad Borro   - RA 10427699
+#   Rafael Lima              - RA 10425819
+#   Pedro Augusto Yoshikuni  - RA 10410287
+#   Tiago Silveira Lopes     - RA 10417600
+#
+# Historico de alteracoes (data | autor | descricao):
+#   2026-09-02 | Guilherme Haddad Borro | Versao inicial (Parte 2).
+#   2026-10-18 | Guilherme Haddad Borro | Parte 3: cabecalho no formato padrao
+#                (sem alteracao funcional; modulo nao usado pela base atual).
+# =============================================================================
 
 import os
 

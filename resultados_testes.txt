@@ -1,0 +1,874 @@
+GrafoRotas - Resultados dos testes das opcoes do menu
+Gerado por testes.py (cada teste executa a opcao com entradas simuladas)
+Execucoes registradas: 51 | aprovadas: 51
+
+==============================================================================
+Opcao  1 | test_01a_padrao_dez_vertices | APROVADO
+Descricao: Exibir com Enter: cabecalho com totais e os 10 primeiros vertices.
+Entradas: ['']
+Esperado: 215 vertices, 643 arestas; 10 linhas e '...'
+------------------------------------------------------------------------------
+Quantos vertices exibir? (Enter = 10, 'tudo' = todos) 
+Grafo: 215 vertices, 643 arestas
+  [0] Aguaí -> Espírito Santo do Pinhal(51.0 km), Estiva Gerbi(31.8 km), Santa Cruz das Palmeiras(56.1 km), Santo Antônio do Jardim(45.1 km), São João da Boa Vista(25.8 km), Vargem Grande do Sul(42.8 km), Águas da Prata(32.4 km)
+  [1] Alambari -> Araçoiaba da Serra(37.5 km), Capela do Alto(27.2 km), Itapetininga(21.7 km), Sarapuí(16.3 km), São Miguel Arcanjo(65.2 km), Tatuí(39.2 km)
+  [2] Alumínio -> Ibiúna(25.3 km), Mairinque(9.0 km), Piedade(52.6 km), Sorocaba(24.5 km), São Roque(14.7 km), Votorantim(24.5 km)
+  [3] Americana -> Cosmópolis(24.7 km), Hortolândia(20.5 km), Limeira(26.9 km), Nova Odessa(7.0 km), Santa Bárbara d'Oeste(10.4 km), Sumaré(12.7 km)
+  [4] Amparo -> Jaguariúna(30.6 km), Monte Alegre do Sul(13.1 km), Morungaba(27.6 km), Pedreira(17.9 km), Pinhalzinho(29.9 km), Santo Antônio de Posse(28.9 km), Serra Negra(17.5 km), Tuiuti(21.1 km)
+  [5] Analândia -> Corumbataí(12.7 km), Ipeúna(56.9 km), Leme(48.2 km), Rio Claro(50.5 km), Santa Cruz da Conceição(42.8 km)
+  [6] Angatuba -> Buri(54.8 km), Campina do Monte Alegre(20.0 km), Guareí(48.6 km), Itapetininga(49.9 km), Paranapanema(57.6 km), Torre de Pedra(67.8 km)
+  [7] Apiaí -> Barra do Chapéu(25.0 km), Barra do Turvo(72.4 km), Bom Sucesso de Itararé(55.6 km), Iporanga(41.7 km), Itaoca(24.1 km), Itapirapuã Paulista(63.6 km), Ribeira(33.1 km), Ribeirão Branco(44.2 km)
+  [8] Arandu -> Avaré(15.1 km), Cerqueira César(18.0 km), Iaras(38.9 km), Itaí(52.1 km), Manduri(34.7 km), Paranapanema(92.6 km), Águas de Santa Bárbara(38.7 km), Óleo(43.8 km)
+  [9] Araras -> Conchal(28.0 km), Cordeirópolis(20.4 km), Leme(21.9 km), Rio Claro(25.6 km), Santa Cruz da Conceição(31.3 km), Santa Gertrudes(32.8 km)
+  ...
+
+==============================================================================
+Opcao  1 | test_01b_tudo | APROVADO
+Descricao: Exibir com 'tudo': a lista de adjacencia de todos os vertices.
+Entradas: ['tudo']
+Esperado: 215 linhas de vertices, sem '...'
+------------------------------------------------------------------------------
+Quantos vertices exibir? (Enter = 10, 'tudo' = todos) tudo
+Grafo: 215 vertices, 643 arestas
+  [0] Aguaí -> Espírito Santo do Pinhal(51.0 km), Estiva Gerbi(31.8 km), Santa Cruz das Palmeiras(56.1 km), Santo Antônio do Jardim(45.1 km), São João da Boa Vista(25.8 km), Vargem Grande do Sul(42.8 km), Águas da Prata(32.4 km)
+  [1] Alambari -> Araçoiaba da Serra(37.5 km), Capela do Alto(27.2 km), Itapetininga(21.7 km), Sarapuí(16.3 km), São Miguel Arcanjo(65.2 km), Tatuí(39.2 km)
+  [2] Alumínio -> Ibiúna(25.3 km), Mairinque(9.0 km), Piedade(52.6 km), Sorocaba(24.5 km), São Roque(14.7 km), Votorantim(24.5 km)
+  [3] Americana -> Cosmópolis(24.7 km), Hortolândia(20.5 km), Limeira(26.9 km), Nova Odessa(7.0 km), Santa Bárbara d'Oeste(10.4 km), Sumaré(12.7 km)
+  [4] Amparo -> Jaguariúna(30.6 km), Monte Alegre do Sul(13.1 km), Morungaba(27.6 km), Pedreira(17.9 km), Pinhalzinho(29.9 km), Santo Antônio de Posse(28.9 km), Serra Negra(17.5 km), Tuiuti(21.1 km)
+  [5] Analândia -> Corumbataí(12.7 km), Ipeúna(56.9 km), Leme(48.2 km), Rio Claro(50.5 km), Santa Cruz da Conceição(42.8 km)
+  [6] Angatuba -> Buri(54.8 km), Campina do Monte Alegre(20.0 km), Guareí(48.6 km), Itapetininga(49.9 km), Paranapanema(57.6 km), Torre de Pedra(67.8 km)
+  [7] Apiaí -> Barra do Chapéu(25.0 km), Barra do Turvo(72.4 km), Bom Sucesso de Itararé(55.6 km), Iporanga(41.7 km), Itaoca(24.1 km), Itapirapuã Paulista(63.6 km), Ribeira(33.1 km), Ribeirão Branco(44.2 km)
+  [8] Arandu -> Avaré(15.1 km), Cerqueira César(18.0 km), Iaras(38.9 km), Itaí(52.1 km), Manduri(34.7 km), Paranapanema(92.6 km), Águas de Santa Bárbara(38.7 km), Óleo(43.8 km)
+  [9] Araras -> Conchal(28.0 km), Cordeirópolis(20.4 km), Leme(21.9 km), Rio Claro(25.6 km), Santa Cruz da Conceição(31.3 km), Santa Gertrudes(32.8 km)
+  [10] Araçariguama -> Cabreúva(22.5 km), Mairinque(22.2 km), Pirapora do Bom Jesus(11.3 km), Santana de Parnaíba(21.5 km), São Roque(17.5 km)
+  [11] Araçoiaba da Serra -> Alambari(37.5 km), Capela do Alto(14.1 km), Iperó(26.3 km), Salto de Pirapora(23.0 km), Sorocaba(23.5 km), Votorantim(22.0 km)
+  [12] Artur Nogueira -> Cosmópolis(10.9 km), Engenheiro Coelho(11.0 km), Holambra(16.0 km), Limeira(37.2 km), Paulínia(28.8 km)
+  [13] Arujá -> Ferraz de Vasconcelos(23.0 km), Guararema(41.7 km), Itaquaquecetuba(12.4 km), Poá(19.6 km), Santa Isabel(15.3 km), Suzano(22.0 km)
+  [14] Atibaia -> Bom Jesus dos Perdões(12.1 km), Bragança Paulista(25.4 km), Jarinu(26.2 km), Mairiporã(29.6 km), Nazaré Paulista(22.5 km), Piracaia(23.0 km)
+  [15] Avaré -> Arandu(15.1 km), Cerqueira César(27.5 km), Iaras(62.3 km), Itaí(42.0 km), Paranapanema(82.4 km)
+  [16] Barra do Chapéu -> Apiaí(25.0 km), Bom Sucesso de Itararé(33.1 km), Itaoca(48.8 km), Itapirapuã Paulista(39.1 km), Ribeira(57.8 km)
+  [17] Barra do Turvo -> Apiaí(72.4 km), Cajati(94.6 km), Eldorado(100.2 km), Iporanga(31.3 km), Itaoca(56.5 km)
+  [18] Barueri -> Carapicuíba(5.5 km), Cotia(16.6 km), Itapevi(12.6 km), Jandira(6.1 km), Osasco(11.8 km), Santana de Parnaíba(12.2 km), Vargem Grande Paulista(24.5 km)
+  [19] Barão de Antonina -> Coronel Macedo(36.3 km), Itaporanga(13.2 km), Riversul(32.4 km), Taguaí(71.6 km), Taquarituba(51.9 km)
+  [20] Bertioga -> Cubatão(49.0 km), Guarujá(38.5 km), Rio Grande da Serra(93.1 km), Salesópolis(89.1 km), Santos(44.8 km), São Vicente(64.4 km)
+  [21] Biritiba Mirim -> Guararema(31.4 km), Mogi das Cruzes(21.5 km), Poá(39.0 km), Salesópolis(23.6 km), Suzano(35.3 km)
+  [22] Boituva -> Cerquilho(20.1 km), Iperó(9.5 km), Porto Feliz(22.8 km), Tatuí(27.2 km), Tietê(28.3 km)
+  [23] Bom Jesus dos Perdões -> Atibaia(12.1 km), Bragança Paulista(34.1 km), Joanópolis(43.8 km), Mairiporã(42.3 km), Nazaré Paulista(12.1 km), Piracaia(18.8 km)
+  [24] Bom Sucesso de Itararé -> Apiaí(55.6 km), Barra do Chapéu(33.1 km), Itapirapuã Paulista(44.2 km), Itararé(46.2 km), Nova Campina(40.5 km), Ribeira(73.5 km)
+  [25] Bragança Paulista -> Atibaia(25.4 km), Bom Jesus dos Perdões(34.1 km), Joanópolis(42.6 km), Pedra Bela(31.2 km), Pinhalzinho(26.3 km), Piracaia(28.1 km), Tuiuti(25.8 km), Vargem(20.1 km)
+  [26] Buri -> Angatuba(54.8 km), Campina do Monte Alegre(34.9 km), Capão Bonito(38.9 km), Itapeva(51.0 km), Ribeirão Grande(51.3 km), Taquarivaí(27.7 km)
+  [27] Cabreúva -> Araçariguama(22.5 km), Itu(27.7 km), Itupeva(28.7 km), Pirapora do Bom Jesus(23.0 km), Salto(28.8 km)
+  [28] Caconde -> Divinolândia(24.3 km), Mococa(54.1 km), São José do Rio Pardo(36.5 km), São Sebastião da Grama(39.0 km), Tapiratiba(14.4 km)
+  [29] Caieiras -> Cajamar(29.6 km), Campo Limpo Paulista(24.9 km), Francisco Morato(12.4 km), Franco da Rocha(7.4 km), Mairiporã(23.4 km)
+  [30] Cajamar -> Caieiras(29.6 km), Francisco Morato(23.1 km), Franco da Rocha(26.5 km), Pirapora do Bom Jesus(29.1 km), Santana de Parnaíba(16.4 km), Várzea Paulista(25.9 km)
+  [31] Cajati -> Barra do Turvo(94.6 km), Cananéia(70.9 km), Eldorado(39.3 km), Jacupiranga(14.1 km), Pariquera-Açu(27.7 km), Registro(44.9 km)
+  [32] Campina do Monte Alegre -> Angatuba(20.0 km), Buri(34.9 km), Guareí(56.1 km), Paranapanema(59.0 km), Taquarivaí(62.1 km)
+  [33] Campinas -> Hortolândia(20.6 km), Louveira(30.0 km), Paulínia(21.1 km), Valinhos(10.3 km), Vinhedo(17.7 km)
+  [34] Campo Limpo Paulista -> Caieiras(24.9 km), Francisco Morato(19.6 km), Franco da Rocha(23.0 km), Jarinu(16.7 km), Jundiaí(14.0 km), Várzea Paulista(5.5 km)
+  [35] Cananéia -> Cajati(70.9 km), Iguape(89.8 km), Ilha Comprida(97.7 km), Jacupiranga(57.6 km), Pariquera-Açu(43.4 km)
+  [36] Capela do Alto -> Alambari(27.2 km), Araçoiaba da Serra(14.1 km), Iperó(16.9 km), Sarapuí(30.0 km), Tatuí(21.4 km)
+  [37] Capivari -> Elias Fausto(20.5 km), Mombuca(11.7 km), Monte Mor(23.0 km), Rafard(4.7 km), Rio das Pedras(24.0 km), Saltinho(43.4 km)
+  [38] Capão Bonito -> Buri(38.9 km), Guapiara(33.9 km), Ribeirão Grande(12.4 km), São Miguel Arcanjo(48.5 km), Taquarivaí(40.7 km)
+  [39] Carapicuíba -> Barueri(5.5 km), Embu das Artes(18.7 km), Itapevi(14.4 km), Jandira(9.1 km), Osasco(7.1 km), Santana de Parnaíba(16.2 km), Taboão da Serra(16.4 km)
+  [40] Casa Branca -> Itobi(16.0 km), Santa Cruz das Palmeiras(23.5 km), São Sebastião da Grama(43.2 km), Tambaú(23.5 km), Vargem Grande do Sul(24.7 km)
+  [41] Cerqueira César -> Arandu(18.0 km), Avaré(27.5 km), Iaras(21.6 km), Manduri(17.6 km), Águas de Santa Bárbara(21.6 km), Óleo(26.7 km)
+  [42] Cerquilho -> Boituva(20.1 km), Cesário Lange(35.5 km), Iperó(38.8 km), Jumirim(16.0 km), Laranjal Paulista(24.3 km), Pereiras(42.3 km), Porto Feliz(36.0 km), Tietê(9.1 km)
+  [43] Cesário Lange -> Cerquilho(35.5 km), Jumirim(29.4 km), Laranjal Paulista(36.8 km), Pereiras(18.7 km), Porangaba(21.4 km), Quadra(25.2 km), Tatuí(28.9 km), Torre de Pedra(31.9 km)
+  [44] Charqueada -> Ipeúna(13.6 km), Rio Claro(32.0 km), Santa Gertrudes(38.2 km), Santa Maria da Serra(45.6 km), São Pedro(20.0 km), Águas de São Pedro(24.7 km)
+  [45] Conchal -> Araras(28.0 km), Engenheiro Coelho(20.6 km), Estiva Gerbi(34.3 km), Leme(50.7 km), Mogi Guaçu(37.5 km), Mogi Mirim(29.2 km)
+  [46] Cordeirópolis -> Araras(20.4 km), Iracemápolis(21.7 km), Limeira(13.4 km), Rio Claro(18.6 km), Santa Gertrudes(9.5 km)
+  [47] Coronel Macedo -> Barão de Antonina(36.3 km), Itaberá(36.1 km), Itaporanga(22.9 km), Itaí(39.6 km), Riversul(38.4 km), Taguaí(37.8 km), Taquarituba(18.0 km)
+  [48] Corumbataí -> Analândia(12.7 km), Ipeúna(36.5 km), Leme(36.9 km), Rio Claro(30.2 km), Santa Cruz da Conceição(24.8 km)
+  [49] Cosmópolis -> Americana(24.7 km), Artur Nogueira(10.9 km), Engenheiro Coelho(20.0 km), Holambra(25.6 km), Paulínia(18.2 km)
+  [50] Cotia -> Barueri(16.6 km), Embu das Artes(13.7 km), Itapecerica da Serra(19.2 km), Itapevi(8.1 km), Jandira(13.6 km), São Lourenço da Serra(37.1 km), Taboão da Serra(18.7 km), Vargem Grande Paulista(13.6 km)
+  [51] Cubatão -> Bertioga(49.0 km), Guarujá(31.5 km), Mongaguá(37.0 km), Praia Grande(19.2 km), Ribeirão Pires(46.2 km), Rio Grande da Serra(47.0 km), Santos(20.7 km), São Vicente(15.9 km)
+  [52] Diadema -> Embu-Guaçu(34.1 km), Mauá(19.9 km), Santo André(12.0 km), São Bernardo do Campo(10.4 km), São Caetano do Sul(13.6 km), São Paulo(19.2 km)
+  [53] Divinolândia -> Caconde(24.3 km), Itobi(42.6 km), Mococa(55.3 km), São José do Rio Pardo(33.8 km), São Sebastião da Grama(14.9 km), Tapiratiba(38.5 km), Vargem Grande do Sul(31.7 km)
+  [54] Eldorado -> Barra do Turvo(100.2 km), Cajati(39.3 km), Jacupiranga(25.1 km), Pariquera-Açu(39.7 km), Registro(56.9 km), Sete Barras(39.3 km)
+  [55] Elias Fausto -> Capivari(20.5 km), Indaiatuba(20.8 km), Itu(31.1 km), Mombuca(31.7 km), Monte Mor(15.3 km), Rafard(25.6 km), Salto(26.4 km)
+  [56] Embu das Artes -> Carapicuíba(18.7 km), Cotia(13.7 km), Embu-Guaçu(25.0 km), Itapecerica da Serra(8.5 km), Itapevi(18.1 km), Osasco(20.6 km), São Lourenço da Serra(26.4 km), Taboão da Serra(10.9 km)
+  [57] Embu-Guaçu -> Diadema(34.1 km), Embu das Artes(25.0 km), Itanhaém(122.6 km), Itapecerica da Serra(17.2 km), Juquitiba(41.9 km), São Lourenço da Serra(23.1 km), Taboão da Serra(35.1 km)
+  [58] Engenheiro Coelho -> Artur Nogueira(11.0 km), Conchal(20.6 km), Cosmópolis(20.0 km), Holambra(26.9 km), Limeira(26.0 km)
+  [59] Espírito Santo do Pinhal -> Aguaí(51.0 km), Estiva Gerbi(41.2 km), Itapira(47.3 km), Santo Antônio do Jardim(11.7 km), São João da Boa Vista(31.7 km), Águas da Prata(38.7 km)
+  [60] Estiva Gerbi -> Aguaí(31.8 km), Conchal(34.3 km), Espírito Santo do Pinhal(41.2 km), Itapira(36.6 km), Mogi Guaçu(15.3 km), Mogi Mirim(20.6 km), Santo Antônio do Jardim(51.5 km)
+  [61] Ferraz de Vasconcelos -> Arujá(23.0 km), Guarulhos(25.7 km), Itaquaquecetuba(10.5 km), Mauá(26.2 km), Mogi das Cruzes(21.0 km), Poá(3.8 km), Suzano(9.0 km)
+  [62] Francisco Morato -> Caieiras(12.4 km), Cajamar(23.1 km), Campo Limpo Paulista(19.6 km), Franco da Rocha(9.9 km), Jundiaí(25.5 km), Mairiporã(26.4 km), Várzea Paulista(21.3 km)
+  [63] Franco da Rocha -> Caieiras(7.4 km), Cajamar(26.5 km), Campo Limpo Paulista(23.0 km), Francisco Morato(9.9 km), Mairiporã(17.1 km), Várzea Paulista(24.6 km)
+  [64] Guapiara -> Capão Bonito(33.9 km), Nova Campina(58.5 km), Ribeirão Branco(31.6 km), Ribeirão Grande(30.8 km), Taquarivaí(51.3 km)
+  [65] Guararema -> Arujá(41.7 km), Biritiba Mirim(31.4 km), Mogi das Cruzes(25.4 km), Salesópolis(38.5 km), Santa Isabel(32.6 km)
+  [66] Guareí -> Angatuba(48.6 km), Campina do Monte Alegre(56.1 km), Itapetininga(37.5 km), Porangaba(25.4 km), Quadra(30.6 km), Torre de Pedra(19.1 km)
+  [67] Guarujá -> Bertioga(38.5 km), Cubatão(31.5 km), Praia Grande(23.0 km), Santos(9.7 km), São Vicente(15.9 km)
+  [68] Guarulhos -> Ferraz de Vasconcelos(25.7 km), Itaquaquecetuba(26.1 km), Mairiporã(26.0 km), São Caetano do Sul(21.8 km), São Paulo(18.7 km)
+  [69] Holambra -> Artur Nogueira(16.0 km), Cosmópolis(25.6 km), Engenheiro Coelho(26.9 km), Jaguariúna(18.0 km), Mogi Mirim(29.6 km), Paulínia(29.0 km), Pedreira(31.3 km), Santo Antônio de Posse(15.2 km)
+  [70] Hortolândia -> Americana(20.5 km), Campinas(20.6 km), Monte Mor(17.5 km), Nova Odessa(14.7 km), Paulínia(14.8 km), Sumaré(8.4 km)
+  [71] Iaras -> Arandu(38.9 km), Avaré(62.3 km), Cerqueira César(21.6 km), Manduri(27.9 km), Águas de Santa Bárbara(9.8 km), Óleo(37.0 km)
+  [72] Ibiúna -> Alumínio(25.3 km), Juquitiba(57.0 km), Mairinque(17.1 km), Piedade(28.8 km), São Roque(21.3 km), Vargem Grande Paulista(28.5 km)
+  [73] Iguape -> Cananéia(89.8 km), Ilha Comprida(7.9 km), Jacupiranga(63.2 km), Juquiá(70.8 km), Pariquera-Açu(48.9 km), Registro(77.8 km)
+  [74] Ilha Comprida -> Cananéia(97.7 km), Iguape(7.9 km), Jacupiranga(72.2 km), Pariquera-Açu(57.9 km), Registro(86.8 km)
+  [75] Indaiatuba -> Elias Fausto(20.8 km), Itu(24.1 km), Itupeva(29.1 km), Monte Mor(23.8 km), Salto(16.5 km)
+  [76] Iperó -> Araçoiaba da Serra(26.3 km), Boituva(9.5 km), Capela do Alto(16.9 km), Cerquilho(38.8 km), Porto Feliz(31.4 km), Tatuí(31.6 km)
+  [77] Ipeúna -> Analândia(56.9 km), Charqueada(13.6 km), Corumbataí(36.5 km), Rio Claro(20.9 km), Santa Gertrudes(27.2 km), Santa Maria da Serra(57.0 km), São Pedro(31.5 km), Águas de São Pedro(36.1 km)
+  [78] Iporanga -> Apiaí(41.7 km), Barra do Turvo(31.3 km), Itaoca(58.3 km), Ribeira(73.4 km), Ribeirão Branco(85.9 km)
+  [79] Iracemápolis -> Cordeirópolis(21.7 km), Limeira(13.7 km), Piracicaba(27.6 km), Rio Claro(28.9 km), Santa Bárbara d'Oeste(24.7 km), Santa Gertrudes(29.7 km)
+  [80] Itaberá -> Coronel Macedo(36.1 km), Itapeva(35.1 km), Itararé(51.1 km), Nova Campina(51.8 km), Riversul(37.1 km)
+  [81] Itanhaém -> Embu-Guaçu(122.6 km), Itariri(46.2 km), Juquitiba(125.0 km), Mongaguá(20.6 km), Peruíbe(30.9 km), São Lourenço da Serra(142.9 km)
+  [82] Itaoca -> Apiaí(24.1 km), Barra do Chapéu(48.8 km), Barra do Turvo(56.5 km), Iporanga(58.3 km), Itapirapuã Paulista(56.2 km), Ribeira(29.1 km)
+  [83] Itapecerica da Serra -> Cotia(19.2 km), Embu das Artes(8.5 km), Embu-Guaçu(17.2 km), Juquitiba(41.9 km), São Lourenço da Serra(23.2 km), Taboão da Serra(18.5 km)
+  [84] Itapetininga -> Alambari(21.7 km), Angatuba(49.9 km), Guareí(37.5 km), Quadra(38.4 km), Sarapuí(35.6 km), São Miguel Arcanjo(46.1 km)
+  [85] Itapeva -> Buri(51.0 km), Itaberá(35.1 km), Nova Campina(19.9 km), Ribeirão Branco(34.7 km), Taquarivaí(22.2 km)
+  [86] Itapevi -> Barueri(12.6 km), Carapicuíba(14.4 km), Cotia(8.1 km), Embu das Artes(18.1 km), Jandira(5.1 km), Vargem Grande Paulista(14.0 km)
+  [87] Itapira -> Espírito Santo do Pinhal(47.3 km), Estiva Gerbi(36.6 km), Lindóia(25.0 km), Mogi Guaçu(23.7 km), Mogi Mirim(17.2 km), Santo Antônio de Posse(46.0 km), Águas de Lindóia(32.4 km)
+  [88] Itapirapuã Paulista -> Apiaí(63.6 km), Barra do Chapéu(39.1 km), Bom Sucesso de Itararé(44.2 km), Itaoca(56.2 km), Ribeira(29.4 km)
+  [89] Itaporanga -> Barão de Antonina(13.2 km), Coronel Macedo(22.9 km), Itararé(58.8 km), Riversul(18.9 km), Taguaí(58.1 km), Taquarituba(38.4 km)
+  [90] Itaquaquecetuba -> Arujá(12.4 km), Ferraz de Vasconcelos(10.5 km), Guarulhos(26.1 km), Mogi das Cruzes(22.8 km), Poá(6.8 km), Santa Isabel(26.2 km), Suzano(10.8 km)
+  [91] Itararé -> Bom Sucesso de Itararé(46.2 km), Itaberá(51.1 km), Itaporanga(58.8 km), Nova Campina(66.9 km), Riversul(43.8 km)
+  [92] Itariri -> Itanhaém(46.2 km), Juquitiba(80.0 km), Miracatu(33.0 km), Pedro de Toledo(7.4 km), Peruíbe(20.5 km)
+  [93] Itatiba -> Jarinu(27.5 km), Louveira(19.5 km), Morungaba(19.5 km), Valinhos(22.1 km), Vinhedo(17.9 km)
+  [94] Itaí -> Arandu(52.1 km), Avaré(42.0 km), Coronel Macedo(39.6 km), Paranapanema(61.2 km), Taguaí(40.8 km), Taquarituba(22.5 km)
+  [95] Itobi -> Casa Branca(16.0 km), Divinolândia(42.6 km), Mococa(48.6 km), Santa Cruz das Palmeiras(33.3 km), São José do Rio Pardo(20.3 km), São Sebastião da Grama(29.5 km), Tambaú(39.3 km), Vargem Grande do Sul(17.9 km)
+  [96] Itu -> Cabreúva(27.7 km), Elias Fausto(31.1 km), Indaiatuba(24.1 km), Porto Feliz(25.6 km), Salto(8.8 km)
+  [97] Itupeva -> Cabreúva(28.7 km), Indaiatuba(29.1 km), Jundiaí(21.6 km), Louveira(19.4 km), Valinhos(37.2 km), Vinhedo(25.2 km)
+  [98] Jacupiranga -> Cajati(14.1 km), Cananéia(57.6 km), Eldorado(25.1 km), Iguape(63.2 km), Ilha Comprida(72.2 km), Pariquera-Açu(14.7 km), Registro(31.9 km), Sete Barras(49.1 km)
+  [99] Jaguariúna -> Amparo(30.6 km), Holambra(18.0 km), Paulínia(31.6 km), Pedreira(14.2 km), Santo Antônio de Posse(15.4 km)
+  [100] Jandira -> Barueri(6.1 km), Carapicuíba(9.1 km), Cotia(13.6 km), Itapevi(5.1 km), Osasco(16.0 km), Pirapora do Bom Jesus(31.8 km), Santana de Parnaíba(16.4 km), Vargem Grande Paulista(20.1 km)
+  [101] Jarinu -> Atibaia(26.2 km), Campo Limpo Paulista(16.7 km), Itatiba(27.5 km), Jundiaí(29.1 km), Várzea Paulista(20.6 km)
+  [102] Joanópolis -> Bom Jesus dos Perdões(43.8 km), Bragança Paulista(42.6 km), Pedra Bela(39.6 km), Piracaia(25.0 km), Vargem(24.1 km)
+  [103] Jumirim -> Cerquilho(16.0 km), Cesário Lange(29.4 km), Laranjal Paulista(8.4 km), Pereiras(26.4 km), Tietê(10.9 km)
+  [104] Jundiaí -> Campo Limpo Paulista(14.0 km), Francisco Morato(25.5 km), Itupeva(21.6 km), Jarinu(29.1 km), Louveira(15.6 km), Várzea Paulista(7.7 km)
+  [105] Juquitiba -> Embu-Guaçu(41.9 km), Ibiúna(57.0 km), Itanhaém(125.0 km), Itapecerica da Serra(41.9 km), Itariri(80.0 km), Pedro de Toledo(71.3 km), Peruíbe(98.0 km), São Lourenço da Serra(19.7 km), Vargem Grande Paulista(69.0 km)
+  [106] Juquiá -> Iguape(70.8 km), Miracatu(23.0 km), Pedro de Toledo(47.8 km), Registro(32.2 km), Sete Barras(44.8 km), Tapiraí(60.3 km)
+  [107] Laranjal Paulista -> Cerquilho(24.3 km), Cesário Lange(36.8 km), Jumirim(8.4 km), Pereiras(19.5 km), Tietê(18.9 km)
+  [108] Leme -> Analândia(48.2 km), Araras(21.9 km), Conchal(50.7 km), Corumbataí(36.9 km), Santa Cruz da Conceição(11.4 km)
+  [109] Limeira -> Americana(26.9 km), Artur Nogueira(37.2 km), Cordeirópolis(13.4 km), Engenheiro Coelho(26.0 km), Iracemápolis(13.7 km), Santa Bárbara d'Oeste(34.8 km), Santa Gertrudes(26.2 km)
+  [110] Lindóia -> Itapira(25.0 km), Monte Alegre do Sul(23.6 km), Serra Negra(14.3 km), Socorro(20.9 km), Águas de Lindóia(7.6 km)
+  [111] Louveira -> Campinas(30.0 km), Itatiba(19.5 km), Itupeva(19.4 km), Jundiaí(15.6 km), Valinhos(16.9 km), Vinhedo(7.8 km)
+  [112] Mairinque -> Alumínio(9.0 km), Araçariguama(22.2 km), Ibiúna(17.1 km), São Roque(6.1 km), Vargem Grande Paulista(24.3 km)
+  [113] Mairiporã -> Atibaia(29.6 km), Bom Jesus dos Perdões(42.3 km), Caieiras(23.4 km), Francisco Morato(26.4 km), Franco da Rocha(17.1 km), Guarulhos(26.0 km), Nazaré Paulista(52.2 km)
+  [114] Manduri -> Arandu(34.7 km), Cerqueira César(17.6 km), Iaras(27.9 km), Águas de Santa Bárbara(18.3 km), Óleo(10.2 km)
+  [115] Mauá -> Diadema(19.9 km), Ferraz de Vasconcelos(26.2 km), Ribeirão Pires(9.4 km), Rio Grande da Serra(15.6 km), Santo André(9.5 km), São Bernardo do Campo(15.8 km), São Caetano do Sul(15.9 km)
+  [116] Miracatu -> Itariri(33.0 km), Juquiá(23.0 km), Pedro de Toledo(27.5 km), Registro(50.2 km), Tapiraí(81.9 km)
+  [117] Mococa -> Caconde(54.1 km), Divinolândia(55.3 km), Itobi(48.6 km), São José do Rio Pardo(23.0 km), São Sebastião da Grama(42.1 km), Tambaú(44.0 km), Tapiratiba(39.8 km)
+  [118] Mogi Guaçu -> Conchal(37.5 km), Estiva Gerbi(15.3 km), Itapira(23.7 km), Mogi Mirim(8.3 km), Santo Antônio de Posse(42.8 km)
+  [119] Mogi Mirim -> Conchal(29.2 km), Estiva Gerbi(20.6 km), Holambra(29.6 km), Itapira(17.2 km), Mogi Guaçu(8.3 km), Santo Antônio de Posse(34.5 km)
+  [120] Mogi das Cruzes -> Biritiba Mirim(21.5 km), Ferraz de Vasconcelos(21.0 km), Guararema(25.4 km), Itaquaquecetuba(22.8 km), Poá(17.8 km), Salesópolis(43.6 km), Santa Isabel(37.7 km), Suzano(14.1 km)
+  [121] Mombuca -> Capivari(11.7 km), Elias Fausto(31.7 km), Piracicaba(29.5 km), Rafard(14.3 km), Rio das Pedras(12.5 km), Saltinho(18.4 km)
+  [122] Mongaguá -> Cubatão(37.0 km), Itanhaém(20.6 km), Peruíbe(48.8 km), Praia Grande(25.0 km), Santos(37.1 km), São Vicente(29.8 km)
+  [123] Monte Alegre do Sul -> Amparo(13.1 km), Lindóia(23.6 km), Pinhalzinho(19.5 km), Serra Negra(9.9 km), Socorro(29.9 km), Tuiuti(20.2 km), Águas de Lindóia(30.3 km)
+  [124] Monte Mor -> Capivari(23.0 km), Elias Fausto(15.3 km), Hortolândia(17.5 km), Indaiatuba(23.8 km), Nova Odessa(23.0 km), Sumaré(17.2 km)
+  [125] Morungaba -> Amparo(27.6 km), Itatiba(19.5 km), Pedreira(24.7 km), Tuiuti(17.0 km), Valinhos(39.8 km)
+  [126] Nazaré Paulista -> Atibaia(22.5 km), Bom Jesus dos Perdões(12.1 km), Mairiporã(52.2 km), Piracaia(29.5 km), Santa Isabel(49.9 km)
+  [127] Nova Campina -> Bom Sucesso de Itararé(40.5 km), Guapiara(58.5 km), Itaberá(51.8 km), Itapeva(19.9 km), Itararé(66.9 km), Ribeirão Branco(27.6 km), Taquarivaí(41.6 km)
+  [128] Nova Odessa -> Americana(7.0 km), Hortolândia(14.7 km), Monte Mor(23.0 km), Paulínia(25.0 km), Santa Bárbara d'Oeste(14.8 km), Sumaré(7.1 km)
+  [129] Osasco -> Barueri(11.8 km), Carapicuíba(7.1 km), Embu das Artes(20.6 km), Jandira(16.0 km), São Paulo(23.5 km), Taboão da Serra(12.5 km)
+  [130] Paranapanema -> Angatuba(57.6 km), Arandu(92.6 km), Avaré(82.4 km), Campina do Monte Alegre(59.0 km), Itaí(61.2 km)
+  [131] Pariquera-Açu -> Cajati(27.7 km), Cananéia(43.4 km), Eldorado(39.7 km), Iguape(48.9 km), Ilha Comprida(57.9 km), Jacupiranga(14.7 km), Registro(28.9 km), Sete Barras(46.2 km)
+  [132] Paulínia -> Artur Nogueira(28.8 km), Campinas(21.1 km), Cosmópolis(18.2 km), Holambra(29.0 km), Hortolândia(14.8 km), Jaguariúna(31.6 km), Nova Odessa(25.0 km), Sumaré(17.9 km)
+  [133] Pedra Bela -> Bragança Paulista(31.2 km), Joanópolis(39.6 km), Pinhalzinho(20.9 km), Socorro(41.1 km), Vargem(20.1 km)
+  [134] Pedreira -> Amparo(17.9 km), Holambra(31.3 km), Jaguariúna(14.2 km), Morungaba(24.7 km), Santo Antônio de Posse(23.1 km)
+  [135] Pedro de Toledo -> Itariri(7.4 km), Juquitiba(71.3 km), Juquiá(47.8 km), Miracatu(27.5 km), Peruíbe(27.6 km)
+  [136] Pereiras -> Cerquilho(42.3 km), Cesário Lange(18.7 km), Jumirim(26.4 km), Laranjal Paulista(19.5 km), Porangaba(24.1 km), Torre de Pedra(49.4 km)
+  [137] Peruíbe -> Itanhaém(30.9 km), Itariri(20.5 km), Juquitiba(98.0 km), Mongaguá(48.8 km), Pedro de Toledo(27.6 km)
+  [138] Piedade -> Alumínio(52.6 km), Ibiúna(28.8 km), Pilar do Sul(46.6 km), Salto de Pirapora(27.4 km), Sorocaba(31.1 km), Tapiraí(37.5 km), Votorantim(24.9 km)
+  [139] Pilar do Sul -> Piedade(46.6 km), Salto de Pirapora(26.7 km), Sarapuí(27.4 km), São Miguel Arcanjo(35.9 km), Tapiraí(39.2 km)
+  [140] Pinhalzinho -> Amparo(29.9 km), Bragança Paulista(26.3 km), Monte Alegre do Sul(19.5 km), Pedra Bela(20.9 km), Socorro(27.7 km), Tuiuti(15.7 km), Vargem(37.1 km)
+  [141] Piracaia -> Atibaia(23.0 km), Bom Jesus dos Perdões(18.8 km), Bragança Paulista(28.1 km), Joanópolis(25.0 km), Nazaré Paulista(29.5 km), Vargem(35.1 km)
+  [142] Piracicaba -> Iracemápolis(27.6 km), Mombuca(29.5 km), Rio das Pedras(17.3 km), Saltinho(15.6 km), Santa Bárbara d'Oeste(27.4 km), Santa Maria da Serra(63.9 km), São Pedro(38.1 km), Águas de São Pedro(30.7 km)
+  [143] Pirapora do Bom Jesus -> Araçariguama(11.3 km), Cabreúva(23.0 km), Cajamar(29.1 km), Jandira(31.8 km), Santana de Parnaíba(13.4 km)
+  [144] Porangaba -> Cesário Lange(21.4 km), Guareí(25.4 km), Pereiras(24.1 km), Quadra(19.9 km), Torre de Pedra(16.2 km)
+  [145] Porto Feliz -> Boituva(22.8 km), Cerquilho(36.0 km), Iperó(31.4 km), Itu(25.6 km), Rafard(24.1 km), Salto(33.5 km), Tietê(31.7 km)
+  [146] Poá -> Arujá(19.6 km), Biritiba Mirim(39.0 km), Ferraz de Vasconcelos(3.8 km), Itaquaquecetuba(6.8 km), Mogi das Cruzes(17.8 km), Suzano(5.7 km)
+  [147] Praia Grande -> Cubatão(19.2 km), Guarujá(23.0 km), Mongaguá(25.0 km), Santos(13.9 km), São Vicente(6.6 km)
+  [148] Quadra -> Cesário Lange(25.2 km), Guareí(30.6 km), Itapetininga(38.4 km), Porangaba(19.9 km), Tatuí(25.9 km), Torre de Pedra(21.9 km)
+  [149] Rafard -> Capivari(4.7 km), Elias Fausto(25.6 km), Mombuca(14.3 km), Porto Feliz(24.1 km), Rio das Pedras(26.3 km), Saltinho(45.7 km), Tietê(24.9 km)
+  [150] Registro -> Cajati(44.9 km), Eldorado(56.9 km), Iguape(77.8 km), Ilha Comprida(86.8 km), Jacupiranga(31.9 km), Juquiá(32.2 km), Miracatu(50.2 km), Pariquera-Açu(28.9 km), Sete Barras(19.5 km)
+  [151] Ribeira -> Apiaí(33.1 km), Barra do Chapéu(57.8 km), Bom Sucesso de Itararé(73.5 km), Iporanga(73.4 km), Itaoca(29.1 km), Itapirapuã Paulista(29.4 km)
+  [152] Ribeirão Branco -> Apiaí(44.2 km), Guapiara(31.6 km), Iporanga(85.9 km), Itapeva(34.7 km), Nova Campina(27.6 km), Ribeirão Grande(61.3 km), Taquarivaí(54.4 km)
+  [153] Ribeirão Grande -> Buri(51.3 km), Capão Bonito(12.4 km), Guapiara(30.8 km), Ribeirão Branco(61.3 km), Taquarivaí(56.0 km)
+  [154] Ribeirão Pires -> Cubatão(46.2 km), Mauá(9.4 km), Rio Grande da Serra(6.3 km), Santo André(16.0 km), São Bernardo do Campo(21.2 km), São Caetano do Sul(22.4 km)
+  [155] Rio Claro -> Analândia(50.5 km), Araras(25.6 km), Charqueada(32.0 km), Cordeirópolis(18.6 km), Corumbataí(30.2 km), Ipeúna(20.9 km), Iracemápolis(28.9 km), Santa Cruz da Conceição(53.8 km), Santa Gertrudes(7.8 km)
+  [156] Rio Grande da Serra -> Bertioga(93.1 km), Cubatão(47.0 km), Mauá(15.6 km), Ribeirão Pires(6.3 km), Santo André(21.1 km), São Bernardo do Campo(26.3 km), São Vicente(59.1 km)
+  [157] Rio das Pedras -> Capivari(24.0 km), Mombuca(12.5 km), Piracicaba(17.3 km), Rafard(26.3 km), Saltinho(8.5 km)
+  [158] Riversul -> Barão de Antonina(32.4 km), Coronel Macedo(38.4 km), Itaberá(37.1 km), Itaporanga(18.9 km), Itararé(43.8 km)
+  [159] Salesópolis -> Bertioga(89.1 km), Biritiba Mirim(23.6 km), Guararema(38.5 km), Mogi das Cruzes(43.6 km), Santa Isabel(69.6 km)
+  [160] Saltinho -> Capivari(43.4 km), Mombuca(18.4 km), Piracicaba(15.6 km), Rafard(45.7 km), Rio das Pedras(8.5 km)
+  [161] Salto -> Cabreúva(28.8 km), Elias Fausto(26.4 km), Indaiatuba(16.5 km), Itu(8.8 km), Porto Feliz(33.5 km)
+  [162] Salto de Pirapora -> Araçoiaba da Serra(23.0 km), Piedade(27.4 km), Pilar do Sul(26.7 km), Sarapuí(31.0 km), Sorocaba(23.8 km), Tapiraí(61.9 km), Votorantim(21.5 km)
+  [163] Santa Bárbara d'Oeste -> Americana(10.4 km), Iracemápolis(24.7 km), Limeira(34.8 km), Nova Odessa(14.8 km), Piracicaba(27.4 km), Sumaré(20.4 km)
+  [164] Santa Cruz da Conceição -> Analândia(42.8 km), Araras(31.3 km), Corumbataí(24.8 km), Leme(11.4 km), Rio Claro(53.8 km)
+  [165] Santa Cruz das Palmeiras -> Aguaí(56.1 km), Casa Branca(23.5 km), Itobi(33.3 km), Tambaú(15.7 km), Vargem Grande do Sul(42.2 km)
+  [166] Santa Gertrudes -> Araras(32.8 km), Charqueada(38.2 km), Cordeirópolis(9.5 km), Ipeúna(27.2 km), Iracemápolis(29.7 km), Limeira(26.2 km), Rio Claro(7.8 km)
+  [167] Santa Isabel -> Arujá(15.3 km), Guararema(32.6 km), Itaquaquecetuba(26.2 km), Mogi das Cruzes(37.7 km), Nazaré Paulista(49.9 km), Salesópolis(69.6 km)
+  [168] Santa Maria da Serra -> Charqueada(45.6 km), Ipeúna(57.0 km), Piracicaba(63.9 km), São Pedro(28.5 km), Águas de São Pedro(32.9 km)
+  [169] Santana de Parnaíba -> Araçariguama(21.5 km), Barueri(12.2 km), Cajamar(16.4 km), Carapicuíba(16.2 km), Jandira(16.4 km), Pirapora do Bom Jesus(13.4 km)
+  [170] Santo André -> Diadema(12.0 km), Mauá(9.5 km), Ribeirão Pires(16.0 km), Rio Grande da Serra(21.1 km), São Bernardo do Campo(8.1 km), São Caetano do Sul(7.5 km), São Paulo(20.2 km)
+  [171] Santo Antônio de Posse -> Amparo(28.9 km), Holambra(15.2 km), Itapira(46.0 km), Jaguariúna(15.4 km), Mogi Guaçu(42.8 km), Mogi Mirim(34.5 km), Pedreira(23.1 km)
+  [172] Santo Antônio do Jardim -> Aguaí(45.1 km), Espírito Santo do Pinhal(11.7 km), Estiva Gerbi(51.5 km), São João da Boa Vista(24.6 km), Águas da Prata(31.2 km)
+  [173] Santos -> Bertioga(44.8 km), Cubatão(20.7 km), Guarujá(9.7 km), Mongaguá(37.1 km), Praia Grande(13.9 km), São Vicente(8.4 km)
+  [174] Sarapuí -> Alambari(16.3 km), Capela do Alto(30.0 km), Itapetininga(35.6 km), Pilar do Sul(27.4 km), Salto de Pirapora(31.0 km), São Miguel Arcanjo(47.4 km)
+  [175] Serra Negra -> Amparo(17.5 km), Lindóia(14.3 km), Monte Alegre do Sul(9.9 km), Socorro(31.1 km), Águas de Lindóia(21.1 km)
+  [176] Sete Barras -> Eldorado(39.3 km), Jacupiranga(49.1 km), Juquiá(44.8 km), Pariquera-Açu(46.2 km), Registro(19.5 km)
+  [177] Socorro -> Lindóia(20.9 km), Monte Alegre do Sul(29.9 km), Pedra Bela(41.1 km), Pinhalzinho(27.7 km), Serra Negra(31.1 km), Águas de Lindóia(23.9 km)
+  [178] Sorocaba -> Alumínio(24.5 km), Araçoiaba da Serra(23.5 km), Piedade(31.1 km), Salto de Pirapora(23.8 km), Votorantim(5.7 km)
+  [179] Sumaré -> Americana(12.7 km), Hortolândia(8.4 km), Monte Mor(17.2 km), Nova Odessa(7.1 km), Paulínia(17.9 km), Santa Bárbara d'Oeste(20.4 km)
+  [180] Suzano -> Arujá(22.0 km), Biritiba Mirim(35.3 km), Ferraz de Vasconcelos(9.0 km), Itaquaquecetuba(10.8 km), Mogi das Cruzes(14.1 km), Poá(5.7 km)
+  [181] São Bernardo do Campo -> Diadema(10.4 km), Mauá(15.8 km), Ribeirão Pires(21.2 km), Rio Grande da Serra(26.3 km), Santo André(8.1 km), São Caetano do Sul(12.8 km)
+  [182] São Caetano do Sul -> Diadema(13.6 km), Guarulhos(21.8 km), Mauá(15.9 km), Ribeirão Pires(22.4 km), Santo André(7.5 km), São Bernardo do Campo(12.8 km), São Paulo(13.1 km)
+  [183] São José do Rio Pardo -> Caconde(36.5 km), Divinolândia(33.8 km), Itobi(20.3 km), Mococa(23.0 km), São Sebastião da Grama(19.6 km), Tambaú(56.7 km), Tapiratiba(23.2 km)
+  [184] São João da Boa Vista -> Aguaí(25.8 km), Espírito Santo do Pinhal(31.7 km), Santo Antônio do Jardim(24.6 km), Vargem Grande do Sul(22.5 km), Águas da Prata(10.5 km)
+  [185] São Lourenço da Serra -> Cotia(37.1 km), Embu das Artes(26.4 km), Embu-Guaçu(23.1 km), Itanhaém(142.9 km), Itapecerica da Serra(23.2 km), Juquitiba(19.7 km)
+  [186] São Miguel Arcanjo -> Alambari(65.2 km), Capão Bonito(48.5 km), Itapetininga(46.1 km), Pilar do Sul(35.9 km), Sarapuí(47.4 km)
+  [187] São Paulo -> Diadema(19.2 km), Guarulhos(18.7 km), Osasco(23.5 km), Santo André(20.2 km), São Caetano do Sul(13.1 km)
+  [188] São Pedro -> Charqueada(20.0 km), Ipeúna(31.5 km), Piracicaba(38.1 km), Santa Maria da Serra(28.5 km), Águas de São Pedro(7.6 km)
+  [189] São Roque -> Alumínio(14.7 km), Araçariguama(17.5 km), Ibiúna(21.3 km), Mairinque(6.1 km), Vargem Grande Paulista(19.5 km)
+  [190] São Sebastião da Grama -> Caconde(39.0 km), Casa Branca(43.2 km), Divinolândia(14.9 km), Itobi(29.5 km), Mococa(42.1 km), São José do Rio Pardo(19.6 km), Tapiratiba(40.2 km), Vargem Grande do Sul(17.1 km), Águas da Prata(47.7 km)
+  [191] São Vicente -> Bertioga(64.4 km), Cubatão(15.9 km), Guarujá(15.9 km), Mongaguá(29.8 km), Praia Grande(6.6 km), Rio Grande da Serra(59.1 km), Santos(8.4 km)
+  [192] Taboão da Serra -> Carapicuíba(16.4 km), Cotia(18.7 km), Embu das Artes(10.9 km), Embu-Guaçu(35.1 km), Itapecerica da Serra(18.5 km), Osasco(12.5 km)
+  [193] Taguaí -> Barão de Antonina(71.6 km), Coronel Macedo(37.8 km), Itaporanga(58.1 km), Itaí(40.8 km), Taquarituba(20.4 km)
+  [194] Tambaú -> Casa Branca(23.5 km), Itobi(39.3 km), Mococa(44.0 km), Santa Cruz das Palmeiras(15.7 km), São José do Rio Pardo(56.7 km)
+  [195] Tapiratiba -> Caconde(14.4 km), Divinolândia(38.5 km), Mococa(39.8 km), São José do Rio Pardo(23.2 km), São Sebastião da Grama(40.2 km)
+  [196] Tapiraí -> Juquiá(60.3 km), Miracatu(81.9 km), Piedade(37.5 km), Pilar do Sul(39.2 km), Salto de Pirapora(61.9 km)
+  [197] Taquarituba -> Barão de Antonina(51.9 km), Coronel Macedo(18.0 km), Itaporanga(38.4 km), Itaí(22.5 km), Taguaí(20.4 km)
+  [198] Taquarivaí -> Buri(27.7 km), Campina do Monte Alegre(62.1 km), Capão Bonito(40.7 km), Guapiara(51.3 km), Itapeva(22.2 km), Nova Campina(41.6 km), Ribeirão Branco(54.4 km), Ribeirão Grande(56.0 km)
+  [199] Tatuí -> Alambari(39.2 km), Boituva(27.2 km), Capela do Alto(21.4 km), Cesário Lange(28.9 km), Iperó(31.6 km), Quadra(25.9 km)
+  [200] Tietê -> Boituva(28.3 km), Cerquilho(9.1 km), Jumirim(10.9 km), Laranjal Paulista(18.9 km), Porto Feliz(31.7 km), Rafard(24.9 km)
+  [201] Torre de Pedra -> Angatuba(67.8 km), Cesário Lange(31.9 km), Guareí(19.1 km), Pereiras(49.4 km), Porangaba(16.2 km), Quadra(21.9 km)
+  [202] Tuiuti -> Amparo(21.1 km), Bragança Paulista(25.8 km), Monte Alegre do Sul(20.2 km), Morungaba(17.0 km), Pinhalzinho(15.7 km)
+  [203] Valinhos -> Campinas(10.3 km), Itatiba(22.1 km), Itupeva(37.2 km), Louveira(16.9 km), Morungaba(39.8 km), Vinhedo(7.8 km)
+  [204] Vargem -> Bragança Paulista(20.1 km), Joanópolis(24.1 km), Pedra Bela(20.1 km), Pinhalzinho(37.1 km), Piracaia(35.1 km)
+  [205] Vargem Grande Paulista -> Barueri(24.5 km), Cotia(13.6 km), Ibiúna(28.5 km), Itapevi(14.0 km), Jandira(20.1 km), Juquitiba(69.0 km), Mairinque(24.3 km), São Roque(19.5 km)
+  [206] Vargem Grande do Sul -> Aguaí(42.8 km), Casa Branca(24.7 km), Divinolândia(31.7 km), Itobi(17.9 km), Santa Cruz das Palmeiras(42.2 km), São João da Boa Vista(22.5 km), São Sebastião da Grama(17.1 km), Águas da Prata(33.8 km)
+  [207] Vinhedo -> Campinas(17.7 km), Itatiba(17.9 km), Itupeva(25.2 km), Louveira(7.8 km), Valinhos(7.8 km)
+  [208] Votorantim -> Alumínio(24.5 km), Araçoiaba da Serra(22.0 km), Piedade(24.9 km), Salto de Pirapora(21.5 km), Sorocaba(5.7 km)
+  [209] Várzea Paulista -> Cajamar(25.9 km), Campo Limpo Paulista(5.5 km), Francisco Morato(21.3 km), Franco da Rocha(24.6 km), Jarinu(20.6 km), Jundiaí(7.7 km)
+  [210] Águas da Prata -> Aguaí(32.4 km), Espírito Santo do Pinhal(38.7 km), Santo Antônio do Jardim(31.2 km), São João da Boa Vista(10.5 km), São Sebastião da Grama(47.7 km), Vargem Grande do Sul(33.8 km)
+  [211] Águas de Lindóia -> Itapira(32.4 km), Lindóia(7.6 km), Monte Alegre do Sul(30.3 km), Serra Negra(21.1 km), Socorro(23.9 km)
+  [212] Águas de Santa Bárbara -> Arandu(38.7 km), Cerqueira César(21.6 km), Iaras(9.8 km), Manduri(18.3 km), Óleo(27.2 km)
+  [213] Águas de São Pedro -> Charqueada(24.7 km), Ipeúna(36.1 km), Piracicaba(30.7 km), Santa Maria da Serra(32.9 km), São Pedro(7.6 km)
+  [214] Óleo -> Arandu(43.8 km), Cerqueira César(26.7 km), Iaras(37.0 km), Manduri(10.2 km), Águas de Santa Bárbara(27.2 km)
+
+==============================================================================
+Opcao  2 | test_02a_conteudo_grafo_txt | APROVADO
+Descricao: Mostrar as 6 primeiras linhas do grafo.txt (tipo, n e vertices).
+Entradas: ['C:\\DEV\\projeto_grafos\\repo_commit\\grafo.txt', '6']
+Esperado: 861 linhas; linha 1 = '2', linha 2 = '215'; 855 omitidas
+------------------------------------------------------------------------------
+Arquivo (Enter = grafo.txt): C:\DEV\projeto_grafos\repo_commit\grafo.txt
+Quantas linhas exibir? (Enter = todas) 6
+  Conteudo de 'C:\DEV\projeto_grafos\repo_commit\grafo.txt' (861 linhas):
+     1 | 2
+     2 | 215
+     3 | 0;Aguaí
+     4 | 1;Alambari
+     5 | 2;Alumínio
+     6 | 3;Americana
+  ... (855 linhas omitidas)
+
+==============================================================================
+Opcao  2 | test_02b_arquivo_inexistente | APROVADO
+Descricao: Arquivo inexistente: mensagem de erro, sem encerrar o programa.
+Entradas: ['nao_existe.txt']
+Esperado: mensagem 'Nao foi possivel abrir'
+------------------------------------------------------------------------------
+Arquivo (Enter = grafo.txt): nao_existe.txt
+  Nao foi possivel abrir 'nao_existe.txt': No such file or directory.
+
+==============================================================================
+Opcao  3 | test_03a_novo_vertice | APROVADO
+Descricao: Inserir vertice com id novo: total de vertices aumenta em 1, grau 0.
+Entradas: ['215', 'Cidade Teste']
+Esperado: 216 vertices; grau 0
+------------------------------------------------------------------------------
+ID do novo vertice: 215
+Nome/rotulo da cidade: Cidade Teste
+  Vertice [215] 'Cidade Teste' inserido. Total: 216 vertices.
+
+==============================================================================
+Opcao  3 | test_03b_id_repetido | APROVADO
+Descricao: Inserir id ja existente (0): recusado, total inalterado.
+Entradas: ['0', 'Duplicada']
+Esperado: 'ja existe'; 215 vertices
+------------------------------------------------------------------------------
+ID do novo vertice: 0
+Nome/rotulo da cidade: Duplicada
+  Vertice [0] ja existe (Aguaí).
+
+==============================================================================
+Opcao  4 | test_04a_remove_por_nome | APROVADO
+Descricao: Remover pelo nome a cidade de maior grau: some com todas as suas arestas.
+Entradas: ['juquitiba']
+Esperado: Juquitiba (grau 9): 214 vertices, 643 - 9 = 634 arestas
+------------------------------------------------------------------------------
+Cidade a remover (id ou nome): juquitiba
+  Vertice [105] Juquitiba removido (e suas 9 arestas). Total: 214 vertices, 634 arestas.
+
+==============================================================================
+Opcao  4 | test_04b_inexistente | APROVADO
+Descricao: Remover vertice inexistente (999): mensagem e grafo inalterado.
+Entradas: ['999']
+Esperado: 'nao encontrado'; 215/643
+------------------------------------------------------------------------------
+Cidade a remover (id ou nome): 999
+  Vertice [999] nao encontrado.
+
+==============================================================================
+Opcao  5 | test_05a_nova_aresta | APROVADO
+Descricao: Inserir Sao Paulo - Campinas (95 km): uma aresta a mais, simetrica.
+Entradas: ['Sao Paulo', 'Campinas', '95']
+Esperado: 644 arestas; peso nos 2 sentidos
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Sao Paulo
+Cidade de destino (id ou nome): Campinas
+Peso (distancia em km): 95
+  Aresta São Paulo - Campinas (95.0 km) inserida. Total: 644 arestas.
+
+==============================================================================
+Opcao  5 | test_05b_laco_e_peso_invalido | APROVADO
+Descricao: Laco (origem = destino) e peso negativo sao recusados.
+Entradas: ['Campinas', 'Campinas', '10']
+Esperado: laco recusado
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Campinas
+Cidade de destino (id ou nome): Campinas
+Peso (distancia em km): 10
+  Nao foi possivel inserir: laco (origem = destino) nao permitido.
+
+==============================================================================
+Opcao  5 | test_05b_laco_e_peso_invalido | APROVADO
+Descricao: Laco (origem = destino) e peso negativo sao recusados.
+Entradas: ['Campinas', 'Sorocaba', '-5']
+Esperado: peso negativo recusado
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Campinas
+Cidade de destino (id ou nome): Sorocaba
+Peso (distancia em km): -5
+  Nao foi possivel inserir: o peso deve ser positivo.
+
+==============================================================================
+Opcao  6 | test_06a_aresta_existente | APROVADO
+Descricao: Remover a ligacao mais curta de Sao Paulo: uma aresta a menos.
+Entradas: ['Sao Paulo', 'São Caetano do Sul']
+Esperado: Sao Paulo - São Caetano do Sul removida; 642 arestas
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Sao Paulo
+Cidade de destino (id ou nome): São Caetano do Sul
+  Aresta São Paulo - São Caetano do Sul removida. Total: 642 arestas.
+
+==============================================================================
+Opcao  6 | test_06b_aresta_inexistente | APROVADO
+Descricao: Remover ligacao inexistente (Sao Paulo - Campinas): mensagem.
+Entradas: ['Sao Paulo', 'Campinas']
+Esperado: 'Nao existe aresta'; 643
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Sao Paulo
+Cidade de destino (id ou nome): Campinas
+  Nao existe aresta entre São Paulo e Campinas.
+
+==============================================================================
+Opcao  7 | test_07a_grau_por_nome_sem_acento | APROVADO
+Descricao: Grau de 'sao paulo' (sem acento e minusculo) e seus vizinhos.
+Entradas: ['sao paulo']
+Esperado: grau 5
+------------------------------------------------------------------------------
+Cidade (id ou nome): sao paulo
+  Grau de [187] São Paulo: 5
+    - São Caetano do Sul (13.1 km)
+    - Guarulhos (18.7 km)
+    - Diadema (19.2 km)
+    - Santo André (20.2 km)
+    - Osasco (23.5 km)
+
+==============================================================================
+Opcao  7 | test_07b_nome_ambiguo | APROVADO
+Descricao: Nome ambiguo ('Santa'): pede que o usuario seja mais especifico.
+Entradas: ['Santa']
+Esperado: mensagem de ambiguidade
+------------------------------------------------------------------------------
+Cidade (id ou nome): Santa
+  'Santa' e ambiguo; seja mais especifico ([163] Santa Bárbara d'Oeste, [164] Santa Cruz da Conceição, [165] Santa Cruz das Palmeiras, [166] Santa Gertrudes, [167] Santa Isabel, [168] Santa Maria da Serra ...).
+
+==============================================================================
+Opcao  8 | test_08a_base_conexa | APROVADO
+Descricao: Base real: grafo conexo, com uma unica componente.
+Entradas: []
+Esperado: SIM; 1 componente [215]
+------------------------------------------------------------------------------
+  O grafo e conexo? SIM
+  Numero de componentes conexas: 1
+  Tamanho das componentes: [215]
+
+==============================================================================
+Opcao  8 | test_08b_cidade_isolada | APROVADO
+Descricao: Removendo todas as ligacoes de Aguai: 2 componentes.
+Entradas: []
+Esperado: NAO; componentes [214, 1]
+------------------------------------------------------------------------------
+  O grafo e conexo? NAO
+  Numero de componentes conexas: 2
+  Tamanho das componentes: [214, 1]
+    componente isolada com 1 cidade(s): Aguaí
+
+==============================================================================
+Opcao  9 | test_09a_base | APROVADO
+Descricao: Base conexa: grafo reduzido com 1 supervertice.
+Entradas: []
+Esperado: 1 vertice, 0 arestas
+------------------------------------------------------------------------------
+Grafo: 1 vertices, 0 arestas
+  [0] Componente 0 (215 cidades, ex.: Aguaí) -> 
+
+==============================================================================
+Opcao  9 | test_09b_tres_componentes | APROVADO
+Descricao: Grafo com 3 componentes: grafo reduzido com 3 supervertices.
+Entradas: []
+Esperado: 3 vertices, 0 arestas
+------------------------------------------------------------------------------
+Grafo: 3 vertices, 0 arestas
+  [0] Componente 0 (2 cidades, ex.: V0) -> 
+  [1] Componente 1 (2 cidades, ex.: V2) -> 
+  [2] Componente 2 (1 cidades, ex.: V4) -> 
+
+==============================================================================
+Opcao 10 | test_10a_gravar_e_reler | APROVADO
+Descricao: Gravar apos remover um vertice e reler: arquivo identico ao grafo.
+Entradas: ['C:\\Users\\GUILHE~1\\AppData\\Local\\Temp\\tmpq3dkh69l\\grafo_salvo.txt']
+Esperado: arquivo relido identico ao grafo
+------------------------------------------------------------------------------
+Nome do arquivo (Enter = grafo_salvo.txt): C:\Users\GUILHE~1\AppData\Local\Temp\tmpq3dkh69l\grafo_salvo.txt
+  Grafo gravado em 'C:\Users\GUILHE~1\AppData\Local\Temp\tmpq3dkh69l\grafo_salvo.txt' (214 vertices, 634 arestas).
+
+==============================================================================
+Opcao 10 | test_10b_caminho_invalido | APROVADO
+Descricao: Gravar em pasta inexistente: mensagem de erro, sem travar.
+Entradas: ['C:\\DEV\\projeto_grafos\\repo_commit\\pasta_inexistente\\x.txt']
+Esperado: 'Nao foi possivel gravar'
+------------------------------------------------------------------------------
+Nome do arquivo (Enter = grafo_salvo.txt): C:\DEV\projeto_grafos\repo_commit\pasta_inexistente\x.txt
+  Nao foi possivel gravar 'C:\DEV\projeto_grafos\repo_commit\pasta_inexistente\x.txt': No such file or directory.
+
+==============================================================================
+Opcao 11 | test_11a_recarrega_original | APROVADO
+Descricao: Apos alterar o grafo, recarregar o grafo.txt restaura o original.
+Entradas: ['C:\\DEV\\projeto_grafos\\repo_commit\\grafo.txt']
+Esperado: novo grafo com 215/643
+------------------------------------------------------------------------------
+Arquivo (Enter = grafo.txt): C:\DEV\projeto_grafos\repo_commit\grafo.txt
+  Grafo recarregado de 'C:\DEV\projeto_grafos\repo_commit\grafo.txt': 215 vertices, 643 arestas.
+
+==============================================================================
+Opcao 11 | test_11b_arquivo_mal_formado | APROVADO
+Descricao: Arquivo com aresta invalida: erro com numero da linha; grafo mantido.
+Entradas: ['C:\\Users\\GUILHE~1\\AppData\\Local\\Temp\\tmplg69jp_o\\ruim.txt']
+Esperado: erro na linha 6; grafo atual mantido
+------------------------------------------------------------------------------
+Arquivo (Enter = grafo.txt): C:\Users\GUILHE~1\AppData\Local\Temp\tmplg69jp_o\ruim.txt
+  Arquivo invalido (linha 6: conteudo invalido '0;1;abc'). Grafo mantido.
+
+==============================================================================
+Opcao 12 | test_12a_sao_paulo_campinas | APROVADO
+Descricao: Sao Paulo -> Campinas: distancia igual a de Floyd-Warshall e rota valida.
+Entradas: ['Sao Paulo', 'Campinas']
+Esperado: 135.2 km
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Sao Paulo
+Cidade de destino (id ou nome): Campinas
+  Rota de menor distancia: São Paulo -> Campinas
+  Passo  Cidade                               Trecho   Acumulado
+      0  São Paulo                            0.0 km      0.0 km
+      1  Guarulhos                           18.7 km     18.7 km
+      2  Mairiporã                           26.0 km     44.7 km
+      3  Franco da Rocha                     17.1 km     61.8 km
+      4  Várzea Paulista                     24.6 km     86.4 km
+      5  Jundiaí                              7.7 km     94.1 km
+      6  Louveira                            15.6 km    109.7 km
+      7  Vinhedo                              7.8 km    117.5 km
+      8  Campinas                            17.7 km    135.2 km
+  Distancia total: 135.2 km | trechos: 8 | cidades intermediarias: 7
+
+==============================================================================
+Opcao 12 | test_12b_grafo_conhecido | APROVADO
+Descricao: Grafo de 5 vertices com resposta conhecida: V0->V3 = 9 por V0,V2,V1,V3.
+Entradas: ['V0', 'V3']
+Esperado: 9.0 km; rota V0, V2, V1, V3
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): V0
+Cidade de destino (id ou nome): V3
+  Rota de menor distancia: V0 -> V3
+  Passo  Cidade                               Trecho   Acumulado
+      0  V0                                   0.0 km      0.0 km
+      1  V2                                   3.0 km      3.0 km
+      2  V1                                   4.0 km      7.0 km
+      3  V3                                   2.0 km      9.0 km
+  Distancia total: 9.0 km | trechos: 3 | cidades intermediarias: 2
+
+==============================================================================
+Opcao 12 | test_12c_sem_caminho | APROVADO
+Descricao: Cidades em componentes diferentes: informa que nao existe caminho.
+Entradas: ['V0', 'V3']
+Esperado: 'Nao existe caminho'
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): V0
+Cidade de destino (id ou nome): V3
+  Nao existe caminho entre V0 e V3 (cidades em componentes diferentes).
+
+==============================================================================
+Opcao 12 | test_12d_todas_as_origens_conferidas | APROVADO
+Descricao: Dijkstra a partir de TODAS as cidades coincide com Floyd-Warshall.
+Entradas: ['Sorocaba', 'Registro']
+Esperado: distancia igual a Floyd-Warshall
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Sorocaba
+Cidade de destino (id ou nome): Registro
+  Rota de menor distancia: Sorocaba -> Registro
+  Passo  Cidade                               Trecho   Acumulado
+      0  Sorocaba                             0.0 km      0.0 km
+      1  Votorantim                           5.7 km      5.7 km
+      2  Piedade                             24.9 km     30.6 km
+      3  Tapiraí                             37.5 km     68.1 km
+      4  Juquiá                              60.3 km    128.4 km
+      5  Registro                            32.2 km    160.6 km
+  Distancia total: 160.6 km | trechos: 5 | cidades intermediarias: 4
+
+==============================================================================
+Opcao 13 | test_13a_a_partir_de_sao_paulo | APROVADO
+Descricao: De Sao Paulo: todas alcancaveis; a mais proxima e o vizinho mais curto.
+Entradas: ['Sao Paulo', '3']
+Esperado: 214 alcancaveis; 1a = São Caetano do Sul
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Sao Paulo
+Quantas cidades listar em cada extremo? (Enter = 5) 3
+  Origem: [187] São Paulo | cidades alcancaveis: 214 | inalcancaveis: 0
+  Distancia media as demais cidades: 189.8 km
+  3 mais proximas pela malha:
+    São Caetano do Sul                  13.1 km  (1 trechos)
+    Guarulhos                           18.7 km  (1 trechos)
+    Diadema                             19.2 km  (1 trechos)
+  3 mais distantes pela malha:
+    Óleo                               441.5 km  (14 trechos)
+    Iaras                              436.6 km  (14 trechos)
+    Águas de Santa Bárbara             436.4 km  (14 trechos)
+
+==============================================================================
+Opcao 13 | test_13b_cidade_isolada | APROVADO
+Descricao: Cidade isolada (inserida sem arestas): nenhuma cidade alcancavel.
+Entradas: ['Ilha Teste', '']
+Esperado: 0 alcancaveis; 215 inalcancaveis
+------------------------------------------------------------------------------
+Cidade de origem (id ou nome): Ilha Teste
+Quantas cidades listar em cada extremo? (Enter = 5) 
+  Origem: [999] Ilha Teste | cidades alcancaveis: 0 | inalcancaveis: 215
+
+==============================================================================
+Opcao 14 | test_14a_base_confere_com_kruskal | APROVADO
+Descricao: AGM da base: n - 1 arestas e custo igual ao calculado por Kruskal.
+Entradas: ['n']
+Esperado: 214 arestas; 3944.0 km
+------------------------------------------------------------------------------
+  Arvore geradora minima (Prim): 214 arestas
+  Custo total da AGM: 3944.0 km | soma de todas as arestas: 19589.4 km
+  A AGM usa 20.1% da extensao total modelada.
+  5 maiores ligacoes da AGM (trechos indispensaveis mais longos):
+    Angatuba - Paranapanema: 57.6 km
+    Pariquera-Açu - Iguape: 48.9 km
+    São Miguel Arcanjo - Capão Bonito: 48.5 km
+    Ribeirão Pires - Cubatão: 46.2 km
+    Riversul - Itararé: 43.8 km
+Exibir todas as arestas da AGM? (s/N) n
+
+==============================================================================
+Opcao 14 | test_14b_grafo_conhecido_e_floresta | APROVADO
+Descricao: Quadrado com diagonal (AGM = 1+2+3 = 6) e grafo desconexo (floresta).
+Entradas: ['s']
+Esperado: custo 6.0 km; 3 arestas listadas
+------------------------------------------------------------------------------
+  Arvore geradora minima (Prim): 3 arestas
+  Custo total da AGM: 6.0 km | soma de todas as arestas: 15.0 km
+  A AGM usa 40.0% da extensao total modelada.
+  5 maiores ligacoes da AGM (trechos indispensaveis mais longos):
+    V2 - V3: 3.0 km
+    V1 - V2: 2.0 km
+    V0 - V1: 1.0 km
+Exibir todas as arestas da AGM? (s/N) s
+    V0 - V1: 1.0 km
+    V1 - V2: 2.0 km
+    V2 - V3: 3.0 km
+
+==============================================================================
+Opcao 14 | test_14b_grafo_conhecido_e_floresta | APROVADO
+Descricao: Quadrado com diagonal (AGM = 1+2+3 = 6) e grafo desconexo (floresta).
+Entradas: ['n']
+Esperado: Floresta (2 arvores)
+------------------------------------------------------------------------------
+  Floresta (2 arvores) geradora minima (Prim): 2 arestas
+  Custo total da AGM: 3.0 km | soma de todas as arestas: 3.0 km
+  A AGM usa 100.0% da extensao total modelada.
+  5 maiores ligacoes da AGM (trechos indispensaveis mais longos):
+    V2 - V3: 2.0 km
+    V0 - V1: 1.0 km
+Exibir todas as arestas da AGM? (s/N) n
+
+==============================================================================
+Opcao 15 | test_15a_base | APROVADO
+Descricao: Base: graus minimo e maximo e soma dos graus = 2 x |E| (aperto de maos).
+Entradas: []
+Esperado: min 5, max 9, soma 1286, aperto de maos OK
+------------------------------------------------------------------------------
+  Grau minimo: 5 | maximo: 9 | medio: 5.98 | mediana: 6 | desvio padrao: 1.06
+  Lema do aperto de maos: soma dos graus = 1286 = 2 x 643 arestas -> OK
+  Distribuicao dos graus (grau: quantidade de cidades):
+      5:   89  ########################################
+      6:   70  ###############################
+      7:   31  ##############
+      8:   21  #########
+      9:    4  ##
+  Cidades de grau maximo: Juquitiba, Registro, Rio Claro, São Sebastião da Grama
+  Sequencia de graus (ordem decrescente, 215 valores): 9 9 9 9 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 7 7 7 7 7 ...
+
+==============================================================================
+Opcao 15 | test_15b_estrela | APROVADO
+Descricao: Estrela K1,4: centro com grau 4 e 4 folhas de grau 1.
+Entradas: []
+Esperado: min 1, max 4; distribuicao {1: 4, 4: 1}
+------------------------------------------------------------------------------
+  Grau minimo: 1 | maximo: 4 | medio: 1.60 | mediana: 1 | desvio padrao: 1.20
+  Lema do aperto de maos: soma dos graus = 8 = 2 x 4 arestas -> OK
+  Distribuicao dos graus (grau: quantidade de cidades):
+      1:    4  ########################################
+      4:    1  ##########
+  Cidades de grau maximo: V0
+  Sequencia de graus (ordem decrescente, 5 valores): 4 1 1 1 1
+
+==============================================================================
+Opcao 16 | test_16a_base_numero_cromatico_exato | APROVADO
+Descricao: Base: coloracao valida; Welsh-Powell usa tantas cores quanto a clique maxima (chi exato).
+Entradas: []
+Esperado: 6 cores; clique K6; chi = 6 exato; nao bipartido
+------------------------------------------------------------------------------
+  Cores usadas (Welsh-Powell): 6 | coloracao valida? SIM
+  Clique maxima (Bron-Kerbosch): 6 vertices -> Arandu, Cerqueira César, Iaras, Manduri, Águas de Santa Bárbara, Óleo
+  Como omega(G) = 6 <= chi(G) <= 6, o numero cromatico e EXATAMENTE 6.
+  O grafo e bipartido? NAO
+  Particoes (conjuntos independentes de cidades sem ligacao direta):
+    Cor 1:  39 cidades (ex.: Aguaí, Alambari, Amparo, Angatuba, ...)
+    Cor 2:  46 cidades (ex.: Alumínio, Americana, Araras, Biritiba Mirim, ...)
+    Cor 3:  43 cidades (ex.: Analândia, Araçoiaba da Serra, Artur Nogueira, Atibaia, ...)
+    Cor 4:  44 cidades (ex.: Avaré, Barueri, Bertioga, Bom Jesus dos Perdões, ...)
+    Cor 5:  33 cidades (ex.: Barra do Chapéu, Boituva, Eldorado, Guarujá, ...)
+    Cor 6:  10 cidades (ex.: Itapirapuã Paulista, Laranjal Paulista, Peruíbe, Praia Grande, ...)
+
+==============================================================================
+Opcao 16 | test_16b_ciclo_par_e_impar | APROVADO
+Descricao: C6 e bipartido (2 cores); C5 exige 3 cores.
+Entradas: []
+Esperado: C6: 2 cores, bipartido SIM
+------------------------------------------------------------------------------
+  Cores usadas (Welsh-Powell): 2 | coloracao valida? SIM
+  Clique maxima (Bron-Kerbosch): 2 vertices -> V0, V1
+  Como omega(G) = 2 <= chi(G) <= 2, o numero cromatico e EXATAMENTE 2.
+  O grafo e bipartido? SIM
+  Particoes (conjuntos independentes de cidades sem ligacao direta):
+    Cor 1:   3 cidades (ex.: V0, V2, V4)
+    Cor 2:   3 cidades (ex.: V1, V3, V5)
+
+==============================================================================
+Opcao 16 | test_16b_ciclo_par_e_impar | APROVADO
+Descricao: C6 e bipartido (2 cores); C5 exige 3 cores.
+Entradas: []
+Esperado: C5: 3 cores, nao bipartido
+------------------------------------------------------------------------------
+  Cores usadas (Welsh-Powell): 3 | coloracao valida? SIM
+  Clique maxima (Bron-Kerbosch): 2 vertices -> V0, V1
+  Numero cromatico entre 2 e 3.
+  O grafo e bipartido? NAO
+  Particoes (conjuntos independentes de cidades sem ligacao direta):
+    Cor 1:   2 cidades (ex.: V0, V2)
+    Cor 2:   2 cidades (ex.: V1, V3)
+    Cor 3:   1 cidades (ex.: V4)
+
+==============================================================================
+Opcao 17 | test_17a_base | APROVADO
+Descricao: Base: muitos vertices de grau impar -> nem euleriano nem semieuleriano.
+Entradas: []
+Esperado: 124 impares; NAO; NAO
+------------------------------------------------------------------------------
+  Conexo (considerando as arestas)? SIM
+  Vertices de grau impar: 124
+  E euleriano (circuito euleriano)? NAO
+  Tem percurso euleriano aberto (semieuleriano)? NAO
+  Motivo: o Teorema de Euler exige 0 (circuito) ou 2 (percurso) vertices de grau impar; ha 124. Para percorrer todas as ligacoes seria preciso repetir trechos ligando ao menos 62 pares de cidades de grau impar.
+
+==============================================================================
+Opcao 17 | test_17b_casa_e_ciclo | APROVADO
+Descricao: 'Casinha' (2 impares) tem percurso aberto; C5 tem circuito euleriano.
+Entradas: []
+Esperado: semieuleriano SIM; percurso com as 7 arestas
+------------------------------------------------------------------------------
+  Conexo (considerando as arestas)? SIM
+  Vertices de grau impar: 2
+  E euleriano (circuito euleriano)? NAO
+  Tem percurso euleriano aberto (semieuleriano)? SIM
+  Percurso (Hierholzer, 7 arestas): V0 -> V1 -> V2 -> V0 -> V3 -> V2 -> V4 -> V3
+
+==============================================================================
+Opcao 17 | test_17b_casa_e_ciclo | APROVADO
+Descricao: 'Casinha' (2 impares) tem percurso aberto; C5 tem circuito euleriano.
+Entradas: []
+Esperado: euleriano SIM
+------------------------------------------------------------------------------
+  Conexo (considerando as arestas)? SIM
+  Vertices de grau impar: 0
+  E euleriano (circuito euleriano)? SIM
+  Tem percurso euleriano aberto (semieuleriano)? NAO
+  Percurso (Hierholzer, 5 arestas): V0 -> V1 -> V2 -> V3 -> V4 -> V0
+
+==============================================================================
+Opcao 18 | test_18a_base_ciclo_encontrado | APROVADO
+Descricao: Base: ciclo hamiltoniano encontrado e verificado (todas as cidades).
+Entradas: ['n']
+Esperado: SIM, ciclo verificado com 215 cidades
+------------------------------------------------------------------------------
+  Analisando (busca limitada a 10 s)...
+  n = 215 | grau minimo = 5 | n/2 = 107.5
+  Condicao de Dirac (grau minimo >= n/2): NAO
+  Condicao de Ore (grau(u)+grau(v) >= n p/ nao adjacentes): NAO
+  -> Condicoes suficientes nao satisfeitas (nada se conclui por elas).
+  Pontos de articulacao: 0
+  Possui ciclo hamiltoniano? SIM (ciclo encontrado e verificado)
+  Extensao do ciclo encontrado: 6912.7 km (visita as 215 cidades uma unica vez)
+  Inicio: Sorocaba -> Alumínio -> Piedade -> Tapiraí -> Miracatu -> Itariri -> Juquitiba -> Embu-Guaçu -> ...
+Exibir a sequencia completa? (s/N) n
+
+==============================================================================
+Opcao 18 | test_18b_petersen | APROVADO
+Descricao: Petersen: busca exaustiva PROVA que nao ha ciclo; ha caminho.
+Entradas: ['n']
+Esperado: ciclo NAO; caminho SIM
+------------------------------------------------------------------------------
+  Analisando (busca limitada a 10 s)...
+  n = 10 | grau minimo = 3 | n/2 = 5
+  Condicao de Dirac (grau minimo >= n/2): NAO
+  Condicao de Ore (grau(u)+grau(v) >= n p/ nao adjacentes): NAO
+  -> Condicoes suficientes nao satisfeitas (nada se conclui por elas).
+  Pontos de articulacao: 0
+  Possui ciclo hamiltoniano? NAO
+  Possui caminho hamiltoniano? SIM (caminho encontrado e verificado)
+  Extensao do caminho encontrado: 9.0 km (visita as 10 cidades uma unica vez)
+  Inicio: V0 -> V1 -> V2 -> V3 -> V4 -> V9 -> V6 -> V8 -> ...
+Exibir a sequencia completa? (s/N) n
+
+==============================================================================
+Opcao 18 | test_18c_estrela | APROVADO
+Descricao: Estrela K1,3: articulacao impede ciclo e caminho hamiltonianos.
+Entradas: []
+Esperado: condicoes necessarias violadas; NAO; NAO
+------------------------------------------------------------------------------
+  Analisando (busca limitada a 10 s)...
+  n = 4 | grau minimo = 1 | n/2 = 2
+  Condicao de Dirac (grau minimo >= n/2): NAO
+  Condicao de Ore (grau(u)+grau(v) >= n p/ nao adjacentes): NAO
+  -> Condicoes suficientes nao satisfeitas (nada se conclui por elas).
+  Pontos de articulacao: 1
+  Condicao necessaria violada: existe vertice com grau menor que 2.
+  Condicao necessaria violada: existem 1 pontos de articulacao.
+  Possui ciclo hamiltoniano? NAO
+  Possui caminho hamiltoniano? NAO
+
+==============================================================================
+Opcao 19 | test_19a_base_biconexa | APROVADO
+Descricao: Base: nenhuma articulacao e nenhuma ponte (malha 2-conexa).
+Entradas: []
+Esperado: 0 articulacoes; 0 pontes; biconexa
+------------------------------------------------------------------------------
+  Pontos de articulacao (cidades criticas): 0
+  Pontes (ligacoes criticas): 0
+  A malha e 2-conexa (biconexa): a perda de UMA cidade ou de UMA ligacao
+  qualquer nao isola nenhuma parte da regiao.
+
+==============================================================================
+Opcao 19 | test_19b_dois_triangulos | APROVADO
+Descricao: Dois triangulos ligados por uma aresta: 2 articulacoes e 1 ponte.
+Entradas: []
+Esperado: articulacoes V2 e V3; ponte V2 - V3
+------------------------------------------------------------------------------
+  Pontos de articulacao (cidades criticas): 2
+    - [2] V2: sua remocao gera 2 componentes
+    - [3] V3: sua remocao gera 2 componentes
+  Pontes (ligacoes criticas): 1
+    - V2 - V3 (7.0 km)
+
+==============================================================================
+Opcao 19 | test_19c_remocao_confirma | APROVADO
+Descricao: Conferencia por forca bruta: nenhuma remocao de cidade desconecta a base.
+Entradas: []
+Esperado: 0 articulacoes (conferido removendo cada cidade)
+------------------------------------------------------------------------------
+  Pontos de articulacao (cidades criticas): 0
+  Pontes (ligacoes criticas): 0
+  A malha e 2-conexa (biconexa): a perda de UMA cidade ou de UMA ligacao
+  qualquer nao isola nenhuma parte da regiao.
+
+==============================================================================
+Opcao 20 | test_20a_base_nao_planar | APROVADO
+Descricao: Base: contem K5 (Kuratowski) e e confrontada com m <= 3n - 6 -> nao planar.
+Entradas: []
+Esperado: m = 643 vs 3n-6 = 639 (VIOLADA); contem K5; NAO planar
+------------------------------------------------------------------------------
+  Formula de Euler: grafo planar tem m <= 3n - 6 = 639; aqui m = 643 -> VIOLADA
+  Contem K5 (Kuratowski)? SIM (clique maxima com 6 vertices)
+  O grafo e planar? NAO (provado)
+
+==============================================================================
+Opcao 20 | test_20b_k5_e_k4 | APROVADO
+Descricao: K5 nao e planar; K4 respeita as condicoes (inconclusivo).
+Entradas: []
+Esperado: K5: NAO planar
+------------------------------------------------------------------------------
+  Formula de Euler: grafo planar tem m <= 3n - 6 = 9; aqui m = 10 -> VIOLADA
+  Contem K5 (Kuratowski)? SIM (clique maxima com 5 vertices)
+  O grafo e planar? NAO (provado)
+
+==============================================================================
+Opcao 20 | test_20b_k5_e_k4 | APROVADO
+Descricao: K5 nao e planar; K4 respeita as condicoes (inconclusivo).
+Entradas: []
+Esperado: K4: INCONCLUSIVO
+------------------------------------------------------------------------------
+  Formula de Euler: grafo planar tem m <= 3n - 6 = 6; aqui m = 6 -> respeitada
+  Contem K5 (Kuratowski)? NAO (clique maxima com 4 vertices)
+  O grafo e planar? INCONCLUSIVO pelas condicoes necessarias
+
+==============================================================================
+Opcao 21 | test_21a_base_confere_floyd | APROVADO
+Descricao: Base: raio, diametro e centro iguais aos obtidos por Floyd-Warshall.
+Entradas: ['Campinas']
+Esperado: raio 328.5, diametro 653.4, centro Iperó
+------------------------------------------------------------------------------
+  Raio: 328.5 km | Diametro: 653.4 km
+  Centro (menor excentricidade): Iperó
+  Par mais distante (diametro): Barra do Turvo <-> Mococa
+  Mediana do grafo (menor distancia media as demais): Cabreúva (165.5 km em media)
+  5 cidades mais centrais (menor excentricidade):
+    Iperó                              328.5 km
+    Boituva                            334.4 km
+    Cesário Lange                      338.2 km
+    Pereiras                           338.7 km
+    Capela do Alto                     345.4 km
+Consultar a excentricidade de uma cidade? (id/nome ou Enter) Campinas
+  Excentricidade de Campinas: 431.2 km (cidade mais distante: Barra do Turvo)
+
+==============================================================================
+Opcao 21 | test_21b_caminho_p5 | APROVADO
+Descricao: Caminho P5 (pesos 1): raio 2, diametro 4, centro = vertice do meio.
+Entradas: ['']
+Esperado: raio 2.0; diametro 4.0; centro V2
+------------------------------------------------------------------------------
+  Raio: 2.0 km | Diametro: 4.0 km
+  Centro (menor excentricidade): V2
+  Par mais distante (diametro): V0 <-> V4
+  Mediana do grafo (menor distancia media as demais): V2 (1.5 km em media)
+  5 cidades mais centrais (menor excentricidade):
+    V2                                   2.0 km
+    V1                                   3.0 km
+    V3                                   3.0 km
+    V0                                   4.0 km
+    V4                                   4.0 km
+Consultar a excentricidade de uma cidade? (id/nome ou Enter) 

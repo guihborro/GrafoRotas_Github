@@ -1,7 +1,44 @@
-# GrafoRotas - Infraestrutura do grafo (classe Grafo): lista de adjacencia, I/O do grafo.txt, conexidade e grafo reduzido.
-# Teoria dos Grafos | Bacharelado em Ciencia da Computacao
-# Integrantes: Guilherme Haddad Borro - RA 10427699 | Rafael Lima - RA 10425819 | Pedro Augusto Yoshikuni - RA 10410287 | Tiago Silveira Lopes - RA 10417600
-# Historico: 2026-09-02
+# =============================================================================
+# GrafoRotas - Infraestrutura do grafo (classe Grafo): lista de adjacencia,
+# leitura/gravacao do grafo.txt, busca de vertices por nome, conexidade e
+# grafo reduzido.
+#
+# Teoria dos Grafos - 6o semestre | Bacharelado em Ciencia da Computacao
+# Universidade Presbiteriana Mackenzie - Prof. Dr. Ivan Carlos Alcantara de Oliveira
+#
+# Integrantes:
+#   Guilherme Haddad Borro   - RA 10427699
+#   Rafael Lima              - RA 10425819
+#   Pedro Augusto Yoshikuni  - RA 10410287
+#   Tiago Silveira Lopes     - RA 10417600
+#
+# Historico de alteracoes (data | autor | descricao):
+#   2026-09-02 | Guilherme Haddad Borro | Versao inicial (Parte 2): lista de
+#                adjacencia, I/O do grafo.txt, insercao/remocao, conexidade
+#                por DFS e grafo reduzido.
+#   2026-10-18 | Guilherme Haddad Borro | Parte 3: busca de vertice por nome
+#                (sem acento/caixa), copia do grafo, lista publica de arestas,
+#                validacao do arquivo (erros de formato com numero da linha) e
+#                rejeicao de pesos nao positivos.
+# =============================================================================
+
+import copy
+import unicodedata
+
+
+def normalizar_texto(texto):
+    """Remove acentos, espacos extras e caixa para comparar nomes de cidades.
+
+    Ex.: normalizar_texto("  São  Paulo ") -> "sao paulo"
+    """
+    texto = unicodedata.normalize("NFKD", str(texto))
+    texto = "".join(c for c in texto if not unicodedata.combining(c))
+    return " ".join(texto.lower().split())
+
+
+class ErroFormatoArquivo(ValueError):
+    """Erro levantado quando o grafo.txt nao segue o formato esperado."""
+
 
 class Grafo:
     """Grafo nao orientado, ponderado nas arestas, representado por lista de
@@ -34,6 +71,10 @@ class Grafo:
         """Descricao textual do tipo do grafo."""
         return self.TIPOS.get(self.tipo, "desconhecido")
 
+    def copia(self):
+        """Copia independente do grafo (usada nos testes e em simulacoes)."""
+        return copy.deepcopy(self)
+
     # ------------------------------------------------------------------ #
     # Manipulacao de vertices
     # ------------------------------------------------------------------ #
@@ -60,13 +101,18 @@ class Grafo:
     # Manipulacao de arestas
     # ------------------------------------------------------------------ #
     def inserir_aresta(self, u, v, peso):
-        """Insere aresta nao orientada {u, v} com peso. Cria vertices ausentes."""
+        """Insere (ou atualiza) a aresta nao orientada {u, v} com o peso dado.
+
+        Cria os vertices ausentes. Retorna False, sem alterar o grafo, para
+        laco (u == v) ou peso nao positivo: distancias rodoviarias sao sempre
+        positivas e o algoritmo de Dijkstra exige pesos nao negativos.
+        """
+        if u == v or peso <= 0:
+            return False
         if u not in self.adjacencia:
             self.inserir_vertice(u)
         if v not in self.adjacencia:
             self.inserir_vertice(v)
-        if u == v:
-            return False  # nao permite laco (self-loop)
         self.adjacencia[u][v] = peso
         self.adjacencia[v][u] = peso
         return True
@@ -92,6 +138,38 @@ class Grafo:
         """Grau do vertice (numero de arestas incidentes)."""
         return len(self.adjacencia.get(id_vertice, {}))
 
+    def nome(self, id_vertice):
+        """Rotulo do vertice; se nao houver rotulo, devolve o proprio id."""
+        return self.rotulos.get(id_vertice) or str(id_vertice)
+
+    def buscar_vertice(self, texto):
+        """Localiza um vertice pelo id (numero) ou pelo nome da cidade.
+
+        A comparacao de nomes ignora acentos e maiusculas. Se nao houver nome
+        exatamente igual, aceita um trecho do nome desde que ele identifique
+        uma unica cidade. Retorna (id, None) em caso de sucesso ou
+        (None, mensagem_de_erro) caso contrario.
+        """
+        texto = str(texto).strip()
+        if not texto:
+            return None, "nenhum vertice informado"
+        if texto.lstrip("-").isdigit():
+            vid = int(texto)
+            if vid in self.adjacencia:
+                return vid, None
+            return None, f"vertice [{vid}] nao encontrado"
+        alvo = normalizar_texto(texto)
+        exatos = [v for v, r in self.rotulos.items() if normalizar_texto(r) == alvo]
+        if len(exatos) == 1:
+            return exatos[0], None
+        parciais = [v for v, r in self.rotulos.items() if alvo in normalizar_texto(r)]
+        if len(parciais) == 1:
+            return parciais[0], None
+        if not parciais:
+            return None, f"cidade '{texto}' nao encontrada"
+        opcoes = ", ".join(f"[{v}] {self.rotulos[v]}" for v in sorted(parciais)[:6])
+        return None, f"'{texto}' e ambiguo; seja mais especifico ({opcoes} ...)"
+
     # ------------------------------------------------------------------ #
     # Persistencia: leitura e gravacao do arquivo grafo.txt
     # ------------------------------------------------------------------ #
@@ -101,23 +179,50 @@ class Grafo:
         Formato: a primeira linha e o tipo do grafo; a segunda, o numero de
         vertices; seguem N linhas 'id;nome'; depois o numero de arestas; e, por
         fim, M linhas 'id_u;id_v;peso'.
+
+        Levanta ErroFormatoArquivo (com o numero da linha) se o conteudo nao
+        seguir o formato; nesse caso o grafo atual NAO e alterado.
         """
-        self.rotulos.clear()
-        self.adjacencia.clear()
         with open(caminho, "r", encoding="utf-8") as f:
-            linhas = [ln.strip() for ln in f if ln.strip()]
-        idx = 0
-        self.tipo = int(linhas[idx]); idx += 1
-        n = int(linhas[idx]); idx += 1
-        for _ in range(n):
-            partes = linhas[idx].split(";"); idx += 1
-            id_v = int(partes[0])
-            nome = partes[1] if len(partes) > 1 else ""
-            self.inserir_vertice(id_v, nome)
-        m = int(linhas[idx]); idx += 1
-        for _ in range(m):
-            u, v, peso = linhas[idx].split(";"); idx += 1
-            self.inserir_aresta(int(u), int(v), float(peso))
+            linhas = [(n, ln.strip()) for n, ln in enumerate(f, 1) if ln.strip()]
+
+        novo = Grafo()
+        pos = 0
+
+        def proxima(descricao):
+            nonlocal pos
+            if pos >= len(linhas):
+                raise ErroFormatoArquivo(f"fim inesperado do arquivo: faltou {descricao}")
+            item = linhas[pos]
+            pos += 1
+            return item
+
+        try:
+            num, txt = proxima("o tipo do grafo")
+            novo.tipo = int(txt)
+            num, txt = proxima("o numero de vertices")
+            n = int(txt)
+            for _ in range(n):
+                num, txt = proxima("uma linha de vertice")
+                partes = txt.split(";")
+                novo.inserir_vertice(int(partes[0]), partes[1] if len(partes) > 1 else "")
+            num, txt = proxima("o numero de arestas")
+            m = int(txt)
+            for _ in range(m):
+                num, txt = proxima("uma linha de aresta")
+                u, v, peso = txt.split(";")
+                u, v, peso = int(u), int(v), float(peso)
+                if u not in novo.adjacencia or v not in novo.adjacencia:
+                    raise ErroFormatoArquivo(f"linha {num}: aresta com vertice nao declarado")
+                if not novo.inserir_aresta(u, v, peso):
+                    raise ErroFormatoArquivo(f"linha {num}: laco ou peso nao positivo")
+        except ValueError as erro:
+            if isinstance(erro, ErroFormatoArquivo):
+                raise
+            raise ErroFormatoArquivo(f"linha {num}: conteudo invalido '{txt}'") from erro
+
+        # so substitui o estado atual depois que o arquivo inteiro foi validado
+        self.tipo, self.rotulos, self.adjacencia = novo.tipo, novo.rotulos, novo.adjacencia
         return self
 
     def gravar_arquivo(self, caminho="grafo.txt"):
@@ -127,23 +232,20 @@ class Grafo:
             f.write(f"{self.numero_vertices()}\n")
             for id_v in sorted(self.adjacencia):
                 f.write(f"{id_v};{self.rotulos.get(id_v, '')}\n")
-            arestas = self._lista_arestas()
+            arestas = self.lista_arestas()
             f.write(f"{len(arestas)}\n")
             for u, v, peso in arestas:
                 f.write(f"{u};{v};{peso}\n")
         return caminho
 
-    def _lista_arestas(self):
-        """Lista de arestas unicas (u < v) como (u, v, peso)."""
-        vistas = set()
-        arestas = []
-        for u in sorted(self.adjacencia):
-            for v, peso in self.adjacencia[u].items():
-                a, b = min(u, v), max(u, v)
-                if (a, b) not in vistas:
-                    vistas.add((a, b))
-                    arestas.append((a, b, peso))
-        return sorted(arestas)
+    def lista_arestas(self):
+        """Lista de arestas unicas (u < v) como (u, v, peso), ordenada."""
+        return sorted((u, v, peso)
+                      for u in self.adjacencia
+                      for v, peso in self.adjacencia[u].items() if u < v)
+
+    # mantido por compatibilidade com o codigo da Parte 2
+    _lista_arestas = lista_arestas
 
     # ------------------------------------------------------------------ #
     # Exibicao
