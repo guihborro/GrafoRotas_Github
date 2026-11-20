@@ -140,4 +140,4 @@ exatamente a partir de `cidades.csv`.
 ## Links
 
 - Repositório: https://github.com/guihborro/GrafoRotas_Github
-- Vídeo (YouTube): _a inserir_
+- Vídeo (YouTube): https://youtu.be/qunw0O7dVBI
